@@ -23,7 +23,8 @@ resume_contact_address:         "Kuala Lumpur, Malaysia"
 resume_header_contact_info:     "Kuala Lumpur • syarmineshah@yahoo.com"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p> <li> I am Syarmine Shah, a policy analyst, data analyst and health economist with over 5 years of professional experience. I hold three Microsoft certifications and one AWS certification.</li>
+resume_header_intro: "<p> 
+                          <li> I am Syarmine Shah, a policy analyst, data analyst and health economist with over 5 years of professional experience. I hold three Microsoft certifications and one AWS certification.</li>
                           <br>
                           <li> Previously I worked in insurance sector at Malaysia's Social Security, where I am responsible for financing and system policies. I was involved in national taskforce for COVID-19 financing and policy interventions, where I utilised Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents) to develop dataflow that helps in monitoring and reporting.</li>                         
                           <br>
