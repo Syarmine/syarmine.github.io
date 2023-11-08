@@ -2,11 +2,11 @@
 # uncomment the urls if you wish to display them, and add your own URL
 
 # thesis
-- project: The use of artificial intelligence and machine learning in the pursuit of health insurance in Malaysia\
+- project: The use of artificial intelligence and machine learning in the pursuit of health insurance in Malaysia
   role: Master's dissertation
   duration: 2023
   # url: "#"
-  description: A literature review in the application of AI and ML in health financing and developmetn decisions. All of the included studies (n=12) used on-premise programming software and at research model stage. Personally I think ther is potential use of cloud solutions for scalability and economioes of scale into the real-world applications. Part of requirement of master's degree. 
+  description: A literature review in the application of AI and ML in health financing and developmetn decisions. All of the included studies (n=12) used on-premise programming software and at research model stage. Personally, I think there is potential use of cloud solutions for scalability and economies of scale into the real-world applications. Part of requirement of master's degree. 
 
 # Tableau Public
 - project: "#TableauDataViz Bank of England Insurance Aggregate Data Annual Report"
