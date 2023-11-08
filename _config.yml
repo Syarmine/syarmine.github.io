@@ -26,15 +26,15 @@ display_header_contact_info:    "false"
 resume_header_intro: "<p> 
                           <li> I am Syarmine Shah, a policy analyst, data analyst and health economist with over 5 years of professional experience. I hold three Microsoft certifications and an AWS certification.</li>
                           <br>
-                          <li> Previously, I served in the public insurance sector at Malaysia's Social Security Organisation, where I was responsible of being part of national taskforce for COVID-19 financing and policy intervention. My role involved leveraging tools such as Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents) to develop a dataflow that significantly aided in monitoring and reporting.</li>                         
+                          <li> Previously, I served in the public insurance sector at Malaysia's Social Security Organisation. I was responsible of being part of national taskforce for COVID-19 financing and policy interventions. My role involved leveraging tools such as Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents) to develop a dataflow that significantly aided in monitoring and reporting.</li>                         
                           <br>
-                          <li> During my recent master’s degree, I specialized in policy analysis with focus on health economics. I extensively used the R programming language for statistical and regression analysis, integrating my work with Tableau and RShiny to effectively present my findings. In the process, I explored the use cases of artificial intelligence and machine learning in financing development and policy decisions on a global scale, where I discover the need of secure, scalable, and cost-effective solutions through cloud computing technology.</li>
+                          <li> I then pursue my recent master’s degree, specialising in policy analysis with focus on health economics - pertaining allocation, cost-effectiveness, evaluation and effective use of resources. I extensively used the R programming language for statistical and regression analysis and integrated my coursework with Tableau and RShiny to present my findings. In the process, I explored the use cases of artificial intelligence and machine learning in financing development and policy decisions on a global scale as part of my thesis, where I discover the need of secure, scalable, and cost-effective solutions through cloud computing technology.</li>
                           <br>
-                          <li> Hence, I am currently expanding my skill set by learning cloud solutions, specifically Azure and AWS, while dabbling with Python for its wide-ranging applications in machine learning that are prevalent in the industry.</li>
+                          <li> With that being said, I am currently expanding my skill set by learning cloud solutions, specifically Azure and AWS, while dabbling with Python for its wide-ranging applications in machine learning that are prevalent in the industry.</li>
                           <br>
-                          <li> As the world is moving towards generative AI and predictive analytics, my curiosity has led me to transition into data-driven journey especially in data analysis or data scientist role leveraging data ecosystem with scalalable cloud solutions.</li>
+                          <li> As the world is moving towards generative AI and predictive analytics, it has led me to transition into data-driven journey especially in data analysis and data scientist role leveraging data ecosystem with scalalable cloud solutions.</li>
                           <br> 
-                          </p>""
+                          </p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
