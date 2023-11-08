@@ -32,8 +32,11 @@ resume_header_intro: "<p>
                           <br>
                           <li> Hence, I am currently expanding my skill set by learning cloud solutions, specifically Azure and AWS, while dabbling with Python for its wide-ranging applications in machine learning that are prevalent in the industry.</li>
                           <br>
-                          <li> As the world is moving towards generative AI and predictive analytics, my curiosity has led me to dive deeper into leveraging data ecosystem (i.e data modelling and data engineering) with scalalable cloud solutions.</li></p>"
-                
+                          <li> As the world is moving towards generative AI and predictive analytics, my curiosity has led me to transition into data-driven journey especially in data analysis or data scientist role leveraging data ecosystem with scalalable cloud solutions.</li>
+                          <br> 
+                          <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                          </p>"
+
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
 # or remove the resume_looking_for_work option entirely
