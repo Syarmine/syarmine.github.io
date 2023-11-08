@@ -23,10 +23,11 @@ resume_contact_address:         "Kuala Lumpur, Malaysia"
 resume_header_contact_info:     "Kuala Lumpur • syarmineshah@yahoo.com"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p> <li> I am Syarmine Shah, an analyst with and certified Microsoft x3 and certified AWS x1.</li>
-                          <li> My previous roles as an analyst and medical doctor have equipped me with proficiency in Excel, Microsoft PowerBI, SQL, and the Power Platform suite (including PowerApps, PowerAutomate, and Power Virtual Agents). </li><br>                         <li>During my master’s degree, I specialized in policy (health economics) utilising R programming language for statistical and regression analysis. </li>
-                          <li> Currently, I am expanding my skill set to include cloud solutions, specifically Azure and AWS.</li>
-                          <li> As the world moving towards AI and machine learning, it has led me to dabble with Python and the more scalalable cloud ecosystem </li></p>"
+resume_header_intro: "<p> <li> I am Syarmine Shah, a policy analyst, data analyst and health economist. I have over 5 years of working experience. A certified Microsoft x3 and certified AWS x1.</li>
+                          <li> My previous roles have equipped me with analytical thinking and problem solving, in addition to proficiency in Excel, Microsoft PowerBI, Tableau, SQL, and Power Platform  (PowerApps, PowerAutomate, and Power Virtual Agents). </li><br>                         
+                          <li> During my master’s degree, I specialized in policy (health economics) utilising R programming language for statistical and regression analysis, including the integration with Tableau.</li>
+                          <li> Currently, I am expanding my skill set to include cloud solutions, specifically Azure and AWS. and dabbling with Python for machine learning</li>
+                          <li> As the world is moving cautiously towards AI and the massive use of predictive analytics, my curiosity led me to dive further to leverage data ecosystem with a more scalalable cloud solution</li></p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
