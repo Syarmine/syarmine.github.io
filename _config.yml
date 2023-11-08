@@ -24,7 +24,7 @@ resume_header_contact_info:     "Kuala Lumpur • syarmineshah@yahoo.com"
 display_header_contact_info:    "false"
 
 resume_header_intro: "<p> <li> I am Syarmine Shah, a policy analyst, data analyst and health economist with over 5 years of professional experience. I hold three Microsoft certifications and one AWS certification.</li>
-                          <li> My previous roles have enhanced my analytical thinking and problem-solving skills in real-world setting. I have developed proficiency in tools like Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents). </li>                         
+                          <li> My previous roles in <a href:"https://www.perkeso.gov.my/en/about-us/corporate-information/profile.html") Social Security Organisations (/a) have enhanced my analytical thinking and problem-solving skills in real-world setting. I have developed proficiency in tools like Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents). </li>                         
                           <li> During my master’s degree, I specialized in policy (health economics) and extensively used the R programming language for statistical and regression analysis. This included integrating my work with Tableau.</li>
                           <li> I am currently expanding my skill set to include cloud solutions, specifically Azure and AWS. and dabbling with Python for machine learning applications.</li>
                           <li> As the world is moving towards AI and predictive analytics, my curiosity has led me to dive deeper into leveraging data ecosystem with scalalable cloud solutions.</li></p>"
