@@ -14,3 +14,10 @@
   duration: Present
   url: https://public.tableau.com/app/profile/muhammad.syarmine.bin.mohd.shah/viz/InsuranceAggregateDataAnnualReport/Dashboard1
   description: This dashboard is inspired by the Bank of England (BoE) use of Tableau to present its finding to the public. Replicating the BoE's annual statistics release produced by PRA regulatory data.
+
+# Floursh Public
+- project: "#FlourishDataViz Anthropocene Insights: A Visualization of World Population Trends"
+  role: Flourish Public
+  duration: Present
+  url: https://public.flourish.studio/visualisation/12393682/
+  description: This racing bar chart were created using Flourish Studio to visualise time-series development of world's population by countries, that reached its 8th billion in November 2022.
