@@ -34,8 +34,13 @@ resume_header_intro: "<p>
                           <br>
                           <li> As the world is moving towards generative AI and predictive analytics, my curiosity has led me to transition into data-driven journey especially in data analysis or data scientist role leveraging data ecosystem with scalalable cloud solutions.</li>
                           <br> 
-                          <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
                           </p>"
+                           <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+  </ul>
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
