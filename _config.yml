@@ -26,10 +26,12 @@ display_header_contact_info:    "false"
 resume_header_intro: "<p> 
                           <li> I am Syarmine Shah, a policy analyst, data analyst and health economist with over 5 years of professional experience. I hold three Microsoft certifications and one AWS certification.</li>
                           <br>
-                          <li> Previously I worked in insurance sector at Malaysia's Social Security, where I am responsible for financing and system policies. I was involved in national taskforce for COVID-19 financing and policy interventions, where I utilised Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents) to develop dataflow that helps in monitoring and reporting.</li>                         
+                          <li> Previously, I worked in the insurance sector at Malaysia's Social Security Organisation, where I was responsible in national taskforce for COVID-19 financing and policy interventions, where I utilised Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents) to develop a dataflow that assistend in monitoring and reporting.</li>                         
                           <br>
-                          <li> During my master’s degree, I specialized in policy (health economics) and extensively used the R programming language for statistical and regression analysis. This included integrating my work with Tableau.</li>
-                          <li> I am currently expanding my skill set to include cloud solutions, specifically Azure and AWS. and dabbling with Python for machine learning applications.</li>
+                          <li> During my master’s degree, I specialized in policy analysis (health economics) and extensively used the R programming language for statistical and regression analysis. This included integrating my work with Tableau and RShiny to present my findings. In the process, I explore the use cases of artificial intelligence and machine learning in financing development and policy decisions worldwide, where I discover the need of secure, scalable, and cost-effective solutions through cloud computing technology. </li>
+                          <br>
+                          <li> Hence, I am currently expanding my skill set the application of cloud solutions, specifically Azure and AWS, while dabbling with Python for machine learning applications that are widely used in the industry.</li>
+                          <br>
                           <li> As the world is moving towards AI and predictive analytics, my curiosity has led me to dive deeper into leveraging data ecosystem with scalalable cloud solutions.</li></p>"
                 
 # use "yes" to display the email contact button,
