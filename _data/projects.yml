@@ -9,8 +9,8 @@
   description: A literature review in the application of AI and ML in health financing and developmetn decisions. All of the included studies (n=12) used on-premise programming software and at research model stage. Personally I think ther is potential use of cloud solutions for scalability and economioes of scale into the real-world applications. Part of requirement of master's degree. 
 
 # Tableau Public
-- project: Bank of England UK PRA - Insurance Aggregate Data Annual Report
-  role: Tableau Public Application
+- project: "#TableauDataViz Bank of England Insurance Aggregate Data Annual Report"
+  role: Tableau Public
   duration: Present
-  # url: "https://public.tableau.com/app/profile/muhammad.syarmine.bin.mohd.shah/viz/InsuranceAggregateDataAnnualReport/Dashboard1"
+  url: https://public.tableau.com/app/profile/muhammad.syarmine.bin.mohd.shah/viz/InsuranceAggregateDataAnnualReport/Dashboard1
   description: This dashboard is inspired by the Bank of England (BoE) use of Tableau to present its finding to the public. Replicating the BoE's annual statistics release produced by PRA regulatory data.
