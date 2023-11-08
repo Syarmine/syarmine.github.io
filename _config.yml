@@ -24,15 +24,15 @@ resume_header_contact_info:     "Kuala Lumpur • syarmineshah@yahoo.com"
 display_header_contact_info:    "false"
 
 resume_header_intro: "<p> 
-                          <li> I am Syarmine Shah, a policy analyst, data analyst and health economist with over 5 years of professional experience. I hold three Microsoft certifications and one AWS certification.</li>
+                          <li> I am Syarmine Shah, a policy analyst, data analyst and health economist with over 5 years of professional experience. I hold three Microsoft certifications and an AWS certification.</li>
                           <br>
-                          <li> Previously, I worked in the insurance sector at Malaysia's Social Security Organisation, where I was responsible in national taskforce for COVID-19 financing and policy interventions, where I utilised Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents) to develop a dataflow that assistend in monitoring and reporting.</li>                         
+                          <li> Previously, I served in the public insurance sector at Malaysia's Social Security Organisation, where I was responsible of being part of national taskforce for COVID-19 financing and policy intervention. My role involved leveraging tools such as Excel, Microsoft PowerBI, and the Power Platform suite (PowerApps, PowerAutomate, and Power Virtual Agents) to develop a dataflow that significantly aided in monitoring and reporting.</li>                         
                           <br>
-                          <li> During my master’s degree, I specialized in policy analysis (health economics) and extensively used the R programming language for statistical and regression analysis. This included integrating my work with Tableau and RShiny to present my findings. In the process, I explore the use cases of artificial intelligence and machine learning in financing development and policy decisions worldwide, where I discover the need of secure, scalable, and cost-effective solutions through cloud computing technology. </li>
+                          <li> During my recent master’s degree, I specialized in policy analysis with focus on health economics. I extensively used the R programming language for statistical and regression analysis, integrating my work with Tableau and RShiny to effectively present my findings. In the process, I explored the use cases of artificial intelligence and machine learning in financing development and policy decisions on a global scale, where I discover the need of secure, scalable, and cost-effective solutions through cloud computing technology.</li>
                           <br>
-                          <li> Hence, I am currently expanding my skill set the application of cloud solutions, specifically Azure and AWS, while dabbling with Python for machine learning applications that are widely used in the industry.</li>
+                          <li> Hence, I am currently expanding my skill set by learning cloud solutions, specifically Azure and AWS, while dabbling with Python for its wide-ranging applications in machine learning that are prevalent in the industry.</li>
                           <br>
-                          <li> As the world is moving towards AI and predictive analytics, my curiosity has led me to dive deeper into leveraging data ecosystem with scalalable cloud solutions.</li></p>"
+                          <li> As the world is moving towards generative AI and predictive analytics, my curiosity has led me to dive deeper into leveraging data ecosystem (i.e data modelling and data engineering) with scalalable cloud solutions.</li></p>"
                 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
