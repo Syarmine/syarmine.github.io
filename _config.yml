@@ -63,6 +63,19 @@ resume_print_social_links:      true
 # Design settings
 resume_theme:                   default
 
+# Blog settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Set your default layouts for posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+
 # Note: when editing locally, remember to restart
 # your Jekyll server when you edit this file. Changes
 # to _config.yml are only recognized when the server starts
