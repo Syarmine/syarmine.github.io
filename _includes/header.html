@@ -8,7 +8,6 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="{{ anchor }}#analysis">Analysis</a>
       <a href="{{ '/dashboard/' | relative_url }}"{% if page.url contains '/dashboard/' %} aria-current="page"{% endif %}>Charts</a>
-      <a href="{{ anchor }}#research">Research</a>
       <a href="{{ anchor }}#contact">About</a>
     </nav>
 
@@ -25,7 +24,6 @@
   <nav id="mobile-nav" class="mobile-nav container" aria-label="Mobile" hidden>
     <a href="{{ anchor }}#analysis">Analysis</a>
     <a href="{{ '/dashboard/' | relative_url }}"{% if page.url contains '/dashboard/' %} aria-current="page"{% endif %}>Charts</a>
-    <a href="{{ anchor }}#research">Research</a>
     <a href="{{ anchor }}#contact">About</a>
   </nav>
 </header>

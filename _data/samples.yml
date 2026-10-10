@@ -1,39 +1,6 @@
-# SAMPLE CONTENT for previewing the layout.
-# Shown only while `show_samples: true` in _config.yml, and only where no real
-# content exists yet. Every card renders with a "Sample" badge and no link.
-# Set `show_samples: false` before publishing.
-
-analysis:
-  - kicker: "Health financing"
-    title: "Universal coverage is a budget decision before it is a health one"
-    rubric: "Why the finance ministry, not the health ministry, usually decides how far coverage goes."
-    minutes: 9
-    chart: stacked
-    tone: brand
-  - kicker: "Technology and the state"
-    title: "Why government AI pilots stall after the demo"
-    rubric: "Procurement, data rights and accountability matter more than model accuracy."
-    minutes: 7
-    chart: hbar
-    tone: free
-  - kicker: "Evidence"
-    title: "The dashboard is not the decision"
-    rubric: "What senior teams lose when uncertainty is stripped out of reporting."
-    minutes: 6
-    chart: dots
-    tone: warning
-  - kicker: "Economics of care"
-    title: "The price of a hospital bed is mostly not the bed"
-    rubric: "Where the money in inpatient care goes, and which of it is negotiable."
-    minutes: 8
-    chart: bars
-    tone: brand
-  - kicker: "Workforce"
-    title: "Training budgets buy attendance, not capability"
-    rubric: "How to tell whether an upskilling programme changed anything at all."
-    minutes: 5
-    chart: line
-    tone: success
+# Sample chart cards, shown only while `show_samples: true` in _config.yml and
+# only until _data/dashboards.yml has real entries. Each renders with a
+# "Sample" badge and no link. Sample articles live in _posts/ (sample: true).
 
 charts:
   - kicker: "Health financing"
@@ -41,22 +8,22 @@ charts:
     rubric: "Government, insurance and out-of-pocket shares of health spending, by country."
     chart: stacked
     tone: brand
-    source: "WHO Global Health Expenditure Database"
+    source: "Illustrative data"
   - kicker: "Workforce"
     title: "Doctors per 1,000 people since 2000"
     rubric: "Malaysia against regional and OECD medians."
     chart: line
     tone: free
-    source: "World Bank WDI"
+    source: "Illustrative data"
   - kicker: "Demography"
     title: "Ageing and the health budget"
     rubric: "Population over 65 and projected public health spending."
     chart: area
     tone: warning
-    source: "UN World Population Prospects"
+    source: "Illustrative data"
   - kicker: "Technology"
     title: "Where public-sector AI projects stop"
     rubric: "Share of projects reaching each stage, from pilot to production."
     chart: hbar
     tone: success
-    source: "Illustrative"
+    source: "Illustrative data"

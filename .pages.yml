@@ -1,0 +1,108 @@
+# Pages CMS configuration (https://pagescms.org).
+# Sign in at https://app.pagescms.org with GitHub, open this repository and
+# the sections below appear as forms. Saving commits straight to the branch,
+# and GitHub Pages rebuilds the site.
+
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  categories: [image]
+
+content:
+  - name: posts
+    label: Analysis
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, kicker, date, sample]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Headline
+        type: string
+        required: true
+      - name: date
+        label: Publish date
+        type: date
+        required: true
+      - name: kicker
+        label: Section label
+        description: Short label shown above the headline, e.g. "Health financing".
+        type: string
+      - name: rubric
+        label: Standfirst
+        description: One sentence under the headline that states the argument.
+        type: text
+      - name: image
+        label: Card image
+        description: Optional. Replaces the chart thumbnail on the card and appears at the top of the article.
+        type: image
+      - name: chart
+        label: Thumbnail chart style
+        description: Used on the card when there is no card image.
+        type: select
+        default: line
+        options:
+          values: [line, bars, stacked, hbar, area, dots]
+      - name: tone
+        label: Accent colour
+        type: select
+        default: brand
+        options:
+          values: [brand, free, warning, success]
+      - name: sample
+        label: Sample article
+        description: Tick for preview content. Hidden everywhere when show_samples is false.
+        type: boolean
+        default: false
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          format: markdown
+
+  - name: dashboards
+    label: Charts
+    type: file
+    path: _data/dashboards.yml
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: kicker
+        label: Section label
+        type: string
+      - name: rubric
+        label: Description
+        type: text
+      - name: url
+        label: Link
+        description: Where the card links to, e.g. a Flourish, Datawrapper or Power BI page.
+        type: string
+      - name: image
+        label: Chart image
+        description: Optional screenshot or export of the chart.
+        type: image
+      - name: chart
+        label: Thumbnail chart style
+        description: Used when there is no chart image.
+        type: select
+        default: line
+        options:
+          values: [line, bars, stacked, hbar, area, dots]
+      - name: tone
+        label: Accent colour
+        type: select
+        default: brand
+        options:
+          values: [brand, free, warning, success]
+      - name: source
+        label: Data source
+        type: string
