@@ -1,0 +1,24 @@
+{%- assign home = '/' | relative_url -%}
+{%- if page.url == '/' %}{% assign anchor = '' %}{% else %}{% assign anchor = home %}{% endif -%}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+  <div class="container nav">
+    <a class="brand" href="{{ home }}" aria-label="{{ site.title }} — home">
+      <span class="brand-mark" aria-hidden="true">SS</span>
+      <span class="brand-name">{{ site.title }}</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="{{ anchor }}#about">About</a>
+      <a href="{{ anchor }}#work">Work</a>
+      <a href="{{ anchor }}#toolkit">Toolkit</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Writing</a>
+      <a class="nav-cta" href="{{ anchor }}#contact">Contact</a>
+    </nav>
+
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <span class="when-light">{% include icon.html name="moon" %}</span>
+      <span class="when-dark">{% include icon.html name="sun" %}</span>
+    </button>
+  </div>
+</header>

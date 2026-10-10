@@ -1,23 +1,34 @@
-# Projects
-# uncomment the urls if you wish to display them, and add your own URL
+# Featured work shown on the home page.
+# Fields: title, type, year, url (optional), description, tags, accent (teal | amber | rose)
 
-# thesis
-- project: The use of artificial intelligence and machine learning in the pursuit of universal health coverage in Malaysia
-  role: Master's dissertation
-  duration: 2023
-  # url: "#"
-  description: A literature review in the application of AI and ML in health financing and developmetn decisions. All of the included studies (n=12) used on-premise programming software and at research model stage. Personally, I think there is potential use of cloud solutions for scalability and economies of scale into the real-world applications. Part of requirement of master's degree. 
-
-# Tableau Public
-- project: "#TableauDataViz Bank of England Insurance Aggregate Data Annual Report"
-  role: Tableau Public
-  duration: Present
+- title: "Insurance Aggregate Data — Annual Report"
+  type: "Tableau Public"
+  year: "Ongoing"
   url: https://public.tableau.com/app/profile/muhammad.syarmine.bin.mohd.shah/viz/InsuranceAggregateDataAnnualReport/Dashboard1
-  description: This dashboard is inspired by the Bank of England (BoE) use of Tableau to present its finding to the public. Replicating the BoE's annual statistics release produced by PRA regulatory data.
+  description: >-
+    Inspired by how the Bank of England uses Tableau to publish its findings.
+    A replication of the BoE's annual statistics release built from PRA
+    regulatory data.
+  tags: ["Tableau", "Financial regulation", "Dashboard"]
+  accent: teal
 
-# Floursh Public
-- project: "#FlourishDataViz Anthropocene Insights: A Visualization of World Population Trends"
-  role: Flourish Public
-  duration: Present
+- title: "Anthropocene Insights: World Population Trends"
+  type: "Flourish Studio"
+  year: "Ongoing"
   url: https://public.flourish.studio/visualisation/12393682/
-  description: This racing bar chart were created using Flourish Studio to visualise time-series development of world's population by countries, that reached its 8th billion in November 2022.
+  description: >-
+    A racing bar chart tracing how each country's population has grown over
+    time — up to the moment the world reached 8 billion people in November 2022.
+  tags: ["Flourish", "Time series", "Storytelling"]
+  accent: amber
+
+- title: "AI & Machine Learning for Universal Health Coverage in Malaysia"
+  type: "Master's dissertation"
+  year: "2023"
+  description: >-
+    A literature review of AI and ML in health financing and development
+    decisions. All twelve included studies ran on on-premise software at the
+    research-model stage — which points to real potential for cloud solutions
+    to bring scale to real-world use.
+  tags: ["Research", "Health economics", "AI / ML"]
+  accent: rose

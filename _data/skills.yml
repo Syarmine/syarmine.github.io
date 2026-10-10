@@ -1,12 +1,21 @@
-# Skills
-# Organizational leadership
-- skill: Organizational leadership
-  description: I have several years of experience leading organziations from community groups to business departments. From public speaking, to mentoring, to coordination of people and events, I can lead in any context.
+# Toolkit shown on the home page, grouped by category.
 
-# Communications strategy
-- skill: Communications strategy
-  description: Content and marketing strategy,
+- group: "Languages"
+  icon: code
+  summary: "Cleaning, modelling and analysing data at any scale."
+  items: ["SQL", "Python", "R"]
 
-# Digital content development and creation
-- skill: Digital content development and creation
-  description: Copy writing, graphic design, web design, front-end web development, print design
+- group: "Business Intelligence"
+  icon: chart
+  summary: "Dashboards and reports that people actually open."
+  items: ["Power BI", "Tableau", "Flourish"]
+
+- group: "Platforms & Cloud"
+  icon: cloud
+  summary: "Modern data platforms, end to end."
+  items: ["Microsoft Fabric", "Cloud architecture"]
+
+- group: "Teaching"
+  icon: people
+  summary: "Helping teams build confident data habits."
+  items: ["Workshops", "Executive upskilling", "Mentoring"]
