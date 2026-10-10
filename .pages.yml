@@ -1,108 +1,98 @@
 # Pages CMS configuration (https://pagescms.org).
-# Sign in at https://app.pagescms.org with GitHub, open this repository and
-# the sections below appear as forms. Saving commits straight to the branch,
-# and GitHub Pages rebuilds the site.
-
-media:
-  input: assets/uploads
-  output: /assets/uploads
-  categories: [image]
+# Sign in at https://app.pagescms.org with GitHub, open this repository on the
+# gh-pages branch, and each section below appears as a form. Saving commits to
+# the branch and GitHub Pages rebuilds the site.
 
 content:
-  - name: posts
-    label: Analysis
-    type: collection
-    path: _posts
-    filename: "{year}-{month}-{day}-{primary}.md"
-    view:
-      fields: [title, kicker, date, sample]
-      primary: title
-      sort: [date]
-      default:
-        sort: date
-        order: desc
-    fields:
-      - name: title
-        label: Headline
-        type: string
-        required: true
-      - name: date
-        label: Publish date
-        type: date
-        required: true
-      - name: kicker
-        label: Section label
-        description: Short label shown above the headline, e.g. "Health financing".
-        type: string
-      - name: rubric
-        label: Standfirst
-        description: One sentence under the headline that states the argument.
-        type: text
-      - name: image
-        label: Card image
-        description: Optional. Replaces the chart thumbnail on the card and appears at the top of the article.
-        type: image
-      - name: chart
-        label: Thumbnail chart style
-        description: Used on the card when there is no card image.
-        type: select
-        default: line
-        options:
-          values: [line, bars, stacked, hbar, area, dots]
-      - name: tone
-        label: Accent colour
-        type: select
-        default: brand
-        options:
-          values: [brand, free, warning, success]
-      - name: sample
-        label: Sample article
-        description: Tick for preview content. Hidden everywhere when show_samples is false.
-        type: boolean
-        default: false
-      - name: body
-        label: Article
-        type: rich-text
-        options:
-          format: markdown
-
-  - name: dashboards
-    label: Charts
+  - name: profile
+    label: Summary
     type: file
-    path: _data/dashboards.yml
+    path: _data/profile.yml
+    fields:
+      - { name: headline, label: Headline, type: string }
+      - { name: summary, label: Professional summary, type: text }
+      - name: facts
+        label: At a glance
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: value, label: Value, type: string }
+
+  - name: expertise
+    label: Expertise
+    type: file
+    path: _data/expertise.yml
     list: true
     fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: kicker
-        label: Section label
-        type: string
-      - name: rubric
-        label: Description
-        type: text
-      - name: url
-        label: Link
-        description: Where the card links to, e.g. a Flourish, Datawrapper or Power BI page.
-        type: string
-      - name: image
-        label: Chart image
-        description: Optional screenshot or export of the chart.
-        type: image
-      - name: chart
-        label: Thumbnail chart style
-        description: Used when there is no chart image.
+      - { name: group, label: Group, type: string }
+      - name: icon
+        label: Icon
         type: select
-        default: line
-        options:
-          values: [line, bars, stacked, hbar, area, dots]
+        options: { values: [code, chart, layers, cloud, people, spark, pulse] }
+      - { name: items, label: Tools, type: string, list: true }
+
+  - name: projects
+    label: Projects
+    type: file
+    path: _data/projects.yml
+    list: true
+    fields:
+      - { name: id, label: "ID (short, unique, no spaces)", type: string, required: true }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: category, label: Category, type: string }
+      - { name: summary, label: Card summary, type: text }
+      - { name: stack, label: Stack, type: string, list: true }
+      - name: visual
+        label: Card visual
+        type: select
+        options: { values: [bars, line, stacked, hbar, area, dots, arch, pipeline] }
       - name: tone
         label: Accent colour
         type: select
-        default: brand
-        options:
-          values: [brand, free, warning, success]
-      - name: source
-        label: Data source
-        type: string
+        options: { values: [brand, free, warning, success] }
+      - { name: challenge, label: Challenge, type: text }
+      - { name: solution, label: Solution, type: text }
+      - name: outcomes
+        label: Outcomes
+        type: object
+        list: true
+        fields:
+          - { name: value, label: "Number (e.g. −35%)", type: string }
+          - { name: label, label: What it measures, type: string }
+      - { name: placeholder, label: Figures are placeholders, type: boolean }
+
+  - name: career
+    label: Career
+    type: file
+    path: _data/career.yml
+    list: true
+    fields:
+      - { name: role, label: Role, type: string }
+      - { name: org, label: Organisation, type: string }
+      - { name: period, label: "Period (e.g. 2021 – Present)", type: string }
+      - { name: location, label: Location, type: string }
+      - { name: summary, label: Summary, type: text }
+      - { name: current, label: Current role, type: boolean }
+
+  - name: education
+    label: Education
+    type: file
+    path: _data/education.yml
+    list: true
+    fields:
+      - { name: degree, label: Degree, type: string }
+      - { name: school, label: Institution, type: string }
+      - { name: period, label: Period, type: string }
+
+  - name: credentials
+    label: Credentials
+    type: file
+    path: _data/credentials.yml
+    list: true
+    fields:
+      - { name: name, label: Credential, type: string }
+      - { name: issuer, label: Issuer, type: string }
+      - { name: code, label: "Exam or ID (e.g. PL-300)", type: string }
+      - { name: year, label: Year, type: string }
+      - { name: url, label: Verification link, type: string }

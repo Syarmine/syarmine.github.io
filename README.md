@@ -1,73 +1,44 @@
 # syarmine.github.io
 
-Personal site of **Syarmine Shah**: essays and analysis on economics, technology and institutions.
-Built with Jekyll and hosted on GitHub Pages.
+Professional portfolio of **Syarmine Shah**. Built with Jekyll and hosted on GitHub Pages
+from the `gh-pages` branch.
 
-## Adding articles and charts
+## Editing the content
 
-### Option 1: Pages CMS (recommended, no code)
+All content lives in small data files, so there is no HTML to touch.
 
-1. Go to <https://app.pagescms.org> and sign in with GitHub.
-2. Open `Syarmine/syarmine.github.io` and pick the `gh-pages` branch.
-3. **Analysis** lists the articles. Click **Add an entry**, fill in the headline, date,
-   section label and standfirst, write the article, and save.
-4. **Charts** lists the chart cards. Add a title, description, link and optionally an image.
-
-Saving commits to GitHub and the site rebuilds in a minute or two. Images you upload go to
-`assets/uploads/`. The form fields are defined in `.pages.yml`.
-
-### Option 2: GitHub's web editor
-
-Open the `_posts` folder on github.com, click **Add file → Create new file**, name it
-`YYYY-MM-DD-short-title.md` and start it with:
-
-```yaml
----
-title: "Headline"
-date: 2026-10-20
-kicker: "Health financing"
-rubric: "One sentence that states the argument."
-chart: line      # line, bars, stacked, hbar, area, dots
-tone: brand      # brand, free, warning, success
----
-
-Article text in Markdown.
-```
-
-### Charts inside an article
-
-Add a figure anywhere in the article body:
-
-```liquid
-{% include figure.html chart="line" title="Chart title" subtitle="What it shows" source="Where the data comes from" %}
-{% include figure.html image="/assets/uploads/my-chart.png" title="Chart title" source="Source" %}
-{% include figure.html embed="https://datawrapper.dwcdn.net/AbCdE/1/" height="460" title="Chart title" source="Source" %}
-```
-
-- `chart=` draws a built-in **illustrative** shape. It is not data; use it only as decoration.
-- `image=` shows an uploaded chart image (an export from Datawrapper, Flourish, Power BI, R or Python).
-- `embed=` shows a live, interactive chart from Datawrapper, Flourish or a Power BI "Publish to web" link.
-
-Anything that states real figures should use `image` or `embed`, with the real source in `source=`.
-
-### Sample content
-
-The four articles in `_posts/` marked `sample: true` and the chart cards in `_data/samples.yml`
-are previews. They carry a "Sample" badge and are hidden everywhere once
-`show_samples: false` is set in `_config.yml`. Delete them when you no longer need them.
-
-## Where things live
-
-| What | Where |
+| Section | File |
 | --- | --- |
-| Title, tagline, description, social links, `show_samples` | `_config.yml` |
-| Lead headline and about text | `index.html` |
-| Articles | `_posts/` |
-| Chart cards for `/dashboard/` | `_data/dashboards.yml` |
-| Styles and theme colours | `assets/css/style.css` |
+| Summary and "At a glance" | `_data/profile.yml` |
+| Technical expertise | `_data/expertise.yml` |
+| Projects and case studies (carousel and pop-ups) | `_data/projects.yml` |
+| Career timeline | `_data/career.yml` |
+| Education | `_data/education.yml` |
+| Verified credentials | `_data/credentials.yml` |
+| Name, links, analytics | `_config.yml` |
 
-The visual design follows the Digital Qasas app (`digitalqasas-lms`): Inter, neutral surfaces and the
-petrol brand accent. Light mode is the default, with a dark-mode toggle in the header.
+**Easiest way:** sign in at <https://app.pagescms.org> with GitHub, open
+`Syarmine/syarmine.github.io` on the `gh-pages` branch and edit each section as a form. The forms
+are defined in `.pages.yml`. You can also edit the files directly on github.com.
+
+### Things to complete
+
+- `_data/career.yml` and `_data/education.yml`: replace every `[bracketed]` value.
+- `_data/credentials.yml`: add each credential's public verification link to `url`
+  (Microsoft Learn credential page, Credly or Coursera). A **Verify** button appears when it is set.
+- `_data/projects.yml`: the five projects are templates. Replace the challenge, solution and
+  outcome numbers with real ones, then set `placeholder: false` to remove the
+  "Figures on this project are placeholders" note.
+- `_data/profile.yml`: add your role to "Current".
+
+## Design
+
+The look follows the Digital Qasas app (`digitalqasas-lms`): Inter, neutral surfaces and the petrol
+brand accent. Light mode is the default, with a dark-mode toggle. Styles are in
+`assets/css/style.css` (colour tokens at the top); behaviour (carousel, pop-ups, timeline) is in
+`assets/js/main.js`.
+
+`/dashboard/` is a placeholder page for future dashboards.
 
 ## Running locally
 

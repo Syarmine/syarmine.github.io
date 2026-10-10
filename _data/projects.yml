@@ -1,0 +1,122 @@
+# Projects and case studies (carousel + pop-up).
+# placeholder: true shows a small "figures are placeholders" note in the
+# pop-up. Replace the numbers with real ones and set it to false.
+# visual: line, bars, stacked, hbar, area, dots, arch, pipeline
+- id: exec-dashboard
+  title: "Executive performance dashboard"
+  category: "Business intelligence"
+  stack: ["Power BI", "Tableau", "SQL", "DAX"]
+  visual: bars
+  tone: brand
+  summary: "One governed source for monthly performance reporting across business units."
+  challenge: >-
+    Monthly performance packs were assembled by hand from six spreadsheets and
+    two databases. Each cycle took a week, definitions differed between teams,
+    and leaders were reviewing numbers that were already out of date.
+  solution: >-
+    Built a star-schema model in SQL with agreed KPI definitions, a Power BI
+    semantic model with row-level security for each business unit, and a
+    Tableau view for the external board pack. Scheduled refresh replaced the
+    manual consolidation.
+  outcomes:
+    - value: "5 days → 4 hrs"
+      label: "Reporting cycle"
+    - value: "30"
+      label: "KPIs on one definition"
+    - value: "120+"
+      label: "Monthly active users"
+  placeholder: true
+
+- id: fabric-lakehouse
+  title: "Lakehouse BI on Microsoft Fabric"
+  category: "Data platform"
+  stack: ["Microsoft Fabric", "OneLake", "Dataflows Gen2", "Direct Lake"]
+  visual: stacked
+  tone: free
+  summary: "Moved scattered reporting onto a single Fabric lakehouse with Direct Lake models."
+  challenge: >-
+    Reports pulled from four source systems through separate import models.
+    Refreshes ran overnight, failed often, and every new report duplicated the
+    same transformation logic.
+  solution: >-
+    Landed sources into a Fabric lakehouse with Dataflows Gen2, standardised
+    bronze, silver and gold layers in OneLake, and rebuilt reporting on a shared
+    Direct Lake semantic model so reports read the gold tables directly.
+  outcomes:
+    - value: "6 hrs → 15 min"
+      label: "Data refresh"
+    - value: "4 → 1"
+      label: "Sources unified"
+    - value: "−35%"
+      label: "Capacity cost"
+  placeholder: true
+
+- id: databricks-pipeline
+  title: "Databricks data pipeline"
+  category: "Data engineering"
+  stack: ["Databricks", "PySpark", "Delta Lake", "Workflows"]
+  visual: pipeline
+  tone: warning
+  summary: "Scheduled, tested PySpark pipeline replacing fragile notebook runs."
+  challenge: >-
+    Daily transaction data was processed in ad hoc notebooks run by hand. Jobs
+    were slow, failures went unnoticed, and there was no record of which version
+    of the data a report had used.
+  solution: >-
+    Rebuilt the process as a Databricks Workflow: incremental PySpark loads into
+    Delta tables, data quality checks at each layer, alerts on failure, and Delta
+    time travel for reproducible reporting.
+  outcomes:
+    - value: "50M"
+      label: "Rows processed daily"
+    - value: "−60%"
+      label: "Pipeline runtime"
+    - value: "98%"
+      label: "Quality checks passed"
+  placeholder: true
+
+- id: aws-ec2-site
+  title: "Web server on AWS EC2"
+  category: "Cloud infrastructure"
+  stack: ["AWS EC2", "Linux", "Nginx", "Let's Encrypt"]
+  visual: arch
+  tone: success
+  summary: "A small production website on a hardened Linux virtual machine."
+  challenge: >-
+    A project needed a simple, low-cost website with full control over the
+    server, HTTPS and a repeatable way to deploy updates.
+  solution: >-
+    Provisioned an EC2 instance with a restricted security group and an Elastic
+    IP, configured Nginx as the web server with automatic TLS from Let's
+    Encrypt, and scripted deployment over SSH from the Git repository.
+  outcomes:
+    - value: "99.9%"
+      label: "Uptime"
+    - value: "< 10 min"
+      label: "Deploy time"
+    - value: "≈ $8"
+      label: "Monthly hosting"
+  placeholder: true
+
+- id: azure-static-site
+  title: "Static site on Azure Static Web Apps"
+  category: "Cloud deployment"
+  stack: ["Azure Static Web Apps", "GitHub Actions", "Custom domain"]
+  visual: arch
+  tone: brand
+  summary: "Global, zero-server hosting with deployment on every push."
+  challenge: >-
+    A content site needed fast load times worldwide, HTTPS on a custom domain
+    and no servers to patch, on a minimal budget.
+  solution: >-
+    Deployed to Azure Static Web Apps with a GitHub Actions workflow that builds
+    and publishes on every push, preview environments for pull requests, and a
+    custom domain with managed certificates.
+  outcomes:
+    - value: "≈ 2 min"
+      label: "Push to live"
+    - value: "$0"
+      label: "Hosting (free tier)"
+    - value: "Global"
+      label: "CDN delivery"
+  placeholder: true

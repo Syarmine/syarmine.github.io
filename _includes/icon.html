@@ -34,6 +34,16 @@
 <path d="M4 7h16M4 12h16M4 17h16"/>
 {%- when "spark" -%}
 <path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6z"/>
+{%- when "layers" -%}
+<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5" stroke-opacity=".6"/>
+{%- when "badge" -%}
+<circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/><path d="M9.5 9l1.8 1.8L14.8 7.3"/>
+{%- when "external" -%}
+<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+{%- when "close" -%}
+<path d="M6 6l12 12M18 6L6 18"/>
+{%- when "grad" -%}
+<path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>
 {%- when "pin" -%}
 <path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>
 {%- endcase -%}
