@@ -1,6 +1,6 @@
 # syarmine.github.io
 
-Personal site of **Syarmine Shah**: analysis of health systems, policy and technology.
+Personal site of **Syarmine Shah**: essays and analysis on economics, technology and institutions.
 Built with Jekyll and hosted on GitHub Pages.
 
 ## Adding articles and charts

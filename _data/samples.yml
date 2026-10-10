@@ -3,27 +3,27 @@
 # "Sample" badge and no link. Sample articles live in _posts/ (sample: true).
 
 charts:
-  - kicker: "Health financing"
-    title: "Who pays for health care in ASEAN?"
-    rubric: "Government, insurance and out-of-pocket shares of health spending, by country."
+  - kicker: "Economics"
+    title: "Where the budget actually goes"
+    rubric: "Fixed, committed and discretionary spending as a share of the total."
     chart: stacked
     tone: brand
     source: "Illustrative data"
-  - kicker: "Workforce"
-    title: "Doctors per 1,000 people since 2000"
-    rubric: "Malaysia against regional and OECD medians."
+  - kicker: "Technology"
+    title: "How fast new tools spread"
+    rubric: "Adoption of a new tool across teams, months after launch."
     chart: line
     tone: free
     source: "Illustrative data"
-  - kicker: "Demography"
-    title: "Ageing and the health budget"
-    rubric: "Population over 65 and projected public health spending."
-    chart: area
+  - kicker: "Productivity"
+    title: "Hours worked against output"
+    rubric: "Does more time in the office mean more done?"
+    chart: dots
     tone: warning
     source: "Illustrative data"
-  - kicker: "Technology"
-    title: "Where public-sector AI projects stop"
-    rubric: "Share of projects reaching each stage, from pilot to production."
+  - kicker: "Organisations"
+    title: "Where projects stop"
+    rubric: "Share of initiatives reaching each stage, from idea to rollout."
     chart: hbar
     tone: success
     source: "Illustrative data"

@@ -1,7 +1,7 @@
 ---
 title: "Training budgets buy attendance, not capability"
 date: 2026-09-15
-kicker: "Workforce"
+kicker: "Organisations"
 rubric: "How to tell whether an upskilling programme changed anything at all."
 chart: line
 tone: success

@@ -2,10 +2,10 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Health systems, policy and technology"
+tagline: "Economics, technology and institutions"
 description: >-
-  Analysis of how governments and institutions pay for care, adopt
-  technology and make decisions under uncertainty.
+  Essays and analysis on economics, technology, institutions and how
+  decisions get made.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en

@@ -1,7 +1,7 @@
 ---
 title: "The dashboard is not the decision"
 date: 2026-09-22
-kicker: "Evidence"
+kicker: "Decisions"
 rubric: "What senior teams lose when uncertainty is stripped out of reporting."
 chart: dots
 tone: warning
