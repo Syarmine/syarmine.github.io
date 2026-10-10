@@ -2,20 +2,24 @@
 
 - group: "Languages"
   icon: code
+  tone: brand
   summary: "Cleaning, modelling and analysing data at any scale."
   items: ["SQL", "Python", "R"]
 
 - group: "Business Intelligence"
   icon: chart
+  tone: free
   summary: "Dashboards and reports that people actually open."
   items: ["Power BI", "Tableau", "Flourish"]
 
 - group: "Platforms & Cloud"
   icon: cloud
+  tone: warning
   summary: "Modern data platforms, end to end."
   items: ["Microsoft Fabric", "Cloud architecture"]
 
 - group: "Teaching"
   icon: people
+  tone: success
   summary: "Helping teams build confident data habits."
   items: ["Workshops", "Executive upskilling", "Mentoring"]

@@ -3,27 +3,36 @@
 
   // ---- Theme toggle ----
   var toggle = document.querySelector('[data-theme-toggle]');
-  var media = window.matchMedia('(prefers-color-scheme: dark)');
 
   function currentTheme() {
-    return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light');
+    return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   }
 
   if (toggle) {
     toggle.addEventListener('click', function () {
       var next = currentTheme() === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
+      if (next === 'dark') root.setAttribute('data-theme', 'dark');
+      else root.removeAttribute('data-theme');
       try { localStorage.setItem('theme', next); } catch (e) {}
     });
   }
 
-  // ---- Header border on scroll ----
-  var header = document.querySelector('[data-header]');
-  function onScroll() {
-    if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
+  // ---- Mobile menu ----
+  var menuBtn = document.querySelector('[data-menu-toggle]');
+  var menu = document.getElementById('mobile-nav');
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', function () {
+      var open = menu.hasAttribute('hidden');
+      menu.toggleAttribute('hidden', !open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        menu.setAttribute('hidden', '');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
   // ---- Reveal on scroll ----
   // Reveal anything that has entered (or already passed) the viewport, so

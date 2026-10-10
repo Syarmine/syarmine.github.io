@@ -1,5 +1,5 @@
 # Featured work shown on the home page.
-# Fields: title, type, year, url (optional), description, tags, accent (teal | amber | rose)
+# Fields: title, type, year, url (optional), description, tags, tone (brand | free | warning | success)
 
 - title: "Insurance Aggregate Data — Annual Report"
   type: "Tableau Public"
@@ -10,7 +10,7 @@
     A replication of the BoE's annual statistics release built from PRA
     regulatory data.
   tags: ["Tableau", "Financial regulation", "Dashboard"]
-  accent: teal
+  tone: brand
 
 - title: "Anthropocene Insights: World Population Trends"
   type: "Flourish Studio"
@@ -20,7 +20,7 @@
     A racing bar chart tracing how each country's population has grown over
     time — up to the moment the world reached 8 billion people in November 2022.
   tags: ["Flourish", "Time series", "Storytelling"]
-  accent: amber
+  tone: warning
 
 - title: "AI & Machine Learning for Universal Health Coverage in Malaysia"
   type: "Master's dissertation"
@@ -31,4 +31,4 @@
     research-model stage — which points to real potential for cloud solutions
     to bring scale to real-world use.
   tags: ["Research", "Health economics", "AI / ML"]
-  accent: rose
+  tone: free

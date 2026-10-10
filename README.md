@@ -15,7 +15,9 @@ Built with Jekyll and hosted on GitHub Pages.
 | Profile photo | `images/avatar.jpg` |
 | Styles / theme colours | `assets/css/style.css` (tokens at the top) |
 
-The site supports light and dark mode (follows the system setting, with a toggle in the header).
+The visual design follows the Digital Qasas app (`digitalqasas-lms`): Inter, neutral surfaces and the
+petrol brand accent (`--brand`). Light mode is the default, with a dark-mode toggle in the header.
+Project and toolkit cards take a `tone` of `brand`, `free`, `warning` or `success`.
 
 ## Running locally
 

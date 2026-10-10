@@ -5,7 +5,7 @@ layout: default
   <a class="back-link" href="{{ '/blog/' | relative_url }}">{% include icon.html name="arrow-left" %} All writing</a>
 
   <header class="post-header">
-    <p class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.tags.size > 0 %} · {{ page.tags | join: ", " }}{% endif %}</p>
+    <span class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.tags.size > 0 %} · {{ page.tags | join: ", " }}{% endif %}</span>
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
@@ -14,10 +14,10 @@ layout: default
   </div>
 
   <footer class="post-footer">
-    <img class="post-author-avatar" src="{{ site.author.avatar | relative_url }}" alt="" width="48" height="48">
+    <img src="{{ site.author.avatar | relative_url }}" alt="" width="44" height="44">
     <div>
-      <p class="post-author-name">{{ site.author.name }}</p>
-      <p class="post-author-role">{{ site.author.role }} · {{ site.author.location }}</p>
+      <strong>{{ site.author.name }}</strong>
+      <span>{{ site.author.role }} · {{ site.author.location }}</span>
     </div>
   </footer>
 </article>

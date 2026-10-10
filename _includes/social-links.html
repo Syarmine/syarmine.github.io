@@ -1,4 +1,4 @@
-<ul class="social{% if include.class %} {{ include.class }}{% endif %}">
+<ul class="{{ include.class | default: 'social' }}">
   {%- if site.social.linkedin %}
   <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener me">{% include icon.html name="linkedin" %}<span>LinkedIn</span></a></li>
   {%- endif %}

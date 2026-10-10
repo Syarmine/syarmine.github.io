@@ -2,179 +2,200 @@
 layout: default
 ---
 <!-- ============ HERO ============ -->
-<section class="hero container" aria-labelledby="hero-title">
-  <div class="hero-copy reveal">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <img class="avatar" src="{{ site.author.avatar | relative_url }}" alt="Portrait of {{ site.author.name }}" width="88" height="88">
     {%- if site.author.available %}
-    <p class="status-pill"><span class="pulse" aria-hidden="true"></span>Open to collaborations &amp; new projects</p>
+    <span class="pill"><span class="dot" aria-hidden="true"></span>Open to collaborations &amp; new projects</span>
+    {%- else %}
+    <span class="pill"><span class="dot" aria-hidden="true"></span>{{ site.author.role }} · {{ site.author.location }}</span>
     {%- endif %}
-    <h1 id="hero-title" class="hero-title">
-      Hi, I'm Syarmine.<br>
-      I turn <em>messy data</em> into decisions people can act on.
+    <h1 id="hero-title">
+      Hi, I'm Syarmine. I turn messy data into
+      <span class="text-brand">decisions people act on.</span>
     </h1>
-    <p class="hero-lede">
-      {{ site.author.role }} based in {{ site.author.location }} — working across
-      SQL, Python, R, Microsoft Fabric, Power BI and Tableau, and helping
-      professionals build the confidence to do the same.
+    <p class="hero-sub">
+      {{ site.author.role }} based in Kuala Lumpur, working across SQL, Python,
+      R, Microsoft Fabric, Power BI and Tableau, and helping professionals build
+      the confidence to do the same.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#work">See my work {% include icon.html name="arrow-right" %}</a>
-      <a class="btn btn-ghost" href="{{ site.author.contact_url }}" target="_blank" rel="noopener">Let's talk</a>
+      <a class="btn btn-brand" href="#work">See my work {% include icon.html name="arrow-right" %}</a>
+      <a class="btn btn-outline" href="{{ site.author.contact_url }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
     </div>
-  </div>
 
-  <figure class="hero-visual reveal" aria-hidden="true">
-    <div class="portrait">
-      <img src="{{ site.author.avatar | relative_url }}" alt="" width="400" height="400">
-    </div>
-    <div class="chart-card">
-      <p class="chart-label">Professionals upskilled</p>
-      <p class="chart-value">500+</p>
-      <div class="bars">
-        <span style="--h:28%"></span><span style="--h:42%"></span><span style="--h:36%"></span>
-        <span style="--h:58%"></span><span style="--h:64%"></span><span style="--h:78%"></span><span style="--h:100%"></span>
-      </div>
-    </div>
-    <div class="tag-card"><span class="dot"></span>SQL · Power BI · Tableau</div>
-  </figure>
-</section>
-
-<!-- ============ STATS ============ -->
-<section class="container" aria-label="Highlights">
-  <dl class="stats reveal">
-    <div><dt>Professionals trained</dt><dd>500<span>+</span></dd></div>
-    <div><dt>Core tools in daily use</dt><dd>7</dd></div>
-    <div><dt>Master's research</dt><dd>AI<span>&nbsp;× UHC</span></dd></div>
-    <div><dt>Based in</dt><dd>KL<span>, MY</span></dd></div>
-  </dl>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section id="about" class="section container" aria-labelledby="about-title">
-  <div class="section-head reveal">
-    <p class="eyebrow">01 — About</p>
-    <h2 id="about-title">Analyst by trade, <em>educator</em> by habit.</h2>
-  </div>
-  <div class="about-grid">
-    <div class="prose reveal">
-      <p class="lead">
-        I'm an experienced analyst with a strong skill set in R, Python, SQL,
-        Microsoft Fabric, Power BI and Tableau, along with working knowledge of
-        cloud architecture.
-      </p>
-      <p>
-        What I enjoy most is the moment a dataset stops being a spreadsheet and
-        starts telling a story — the dashboard a leadership team opens every
-        Monday, or the chart that settles a debate in one glance.
-      </p>
-      <p>
-        I'm also a passionate advocate for data literacy. I love helping
-        executives, analysts, consultants and professionals on their data
-        upskilling journey, and to date I've onboarded <strong>more than 500
-        professionals</strong> onto SQL, Power BI and Tableau.
-      </p>
-    </div>
-    <aside class="about-card reveal">
-      <h3>What I can help with</h3>
-      <ul class="check-list">
-        <li>Designing dashboards &amp; reporting in Power BI and Tableau</li>
-        <li>SQL, Python &amp; R analysis — from raw data to insight</li>
-        <li>Modern data platforms with Microsoft Fabric &amp; the cloud</li>
-        <li>Hands-on data training for teams and leaders</li>
-      </ul>
-      <p class="about-location">{% include icon.html name="pin" %} {{ site.author.location }}</p>
-    </aside>
+    <dl class="stats">
+      <div class="stat"><dt>Professionals trained</dt><dd>500+</dd></div>
+      <div class="stat"><dt>Core tools</dt><dd>7</dd></div>
+      <div class="stat"><dt>Public projects</dt><dd>{{ site.data.projects.size }}</dd></div>
+      <div class="stat"><dt>Based in</dt><dd>KL</dd></div>
+    </dl>
   </div>
 </section>
 
-<!-- ============ WORK ============ -->
-<section id="work" class="section container" aria-labelledby="work-title">
-  <div class="section-head reveal">
-    <p class="eyebrow">02 — Selected work</p>
-    <h2 id="work-title">Projects &amp; <em>visualisations</em>.</h2>
-    <p class="section-sub">A few public pieces — dashboards, data stories and research.</p>
+<!-- ============ MARQUEE ============ -->
+{%- assign topics = "SQL,Python,R,Power BI,Tableau,Microsoft Fabric,Flourish,Dashboard design,Data storytelling,Data upskilling,Cloud architecture,Health financing,Regulatory data,Time series" | split: "," %}
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    {%- for round in (1..2) %}{% for t in topics %}
+    <span>{{ t }}<span>✦</span></span>
+    {%- endfor %}{% endfor %}
   </div>
+</div>
 
-  <div class="projects">
-    {%- for project in site.data.projects %}
-    <article class="project accent-{{ project.accent | default: 'teal' }} reveal">
-      <div class="project-top">
-        <span class="project-index">{{ forloop.index | prepend: '0' }}</span>
-        <span class="project-type">{{ project.type }} · {{ project.year }}</span>
-      </div>
-      <h3 class="project-title">
-        {%- if project.url %}
-        <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.title }}</a>
-        {%- else %}
-        {{ project.title }}
+<!-- ============ WORK (bento) ============ -->
+<section id="work" class="section" aria-labelledby="work-title">
+  <div class="container section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">Selected work</span>
+      <h2 id="work-title">Dashboards, data stories and research.</h2>
+      <p>Public pieces built with Tableau, Flourish and a research lens on AI in health financing.</p>
+    </div>
+
+    <div class="bento">
+      {%- for project in site.data.projects %}
+      {%- assign tone = project.tone | default: 'brand' %}
+      <article class="card project tone-{{ tone }}{% if forloop.first %} is-featured{% endif %} reveal">
+        <span class="card-glow" aria-hidden="true"></span>
+        <div class="project-badges">
+          <span class="badge badge-tone">{{ project.type }}</span>
+          <span class="badge">{{ project.year }}</span>
+          {%- if forloop.first %}<span class="badge badge-tone tone-brand">Featured</span>{% endif %}
+        </div>
+        <h3>
+          {%- if project.url %}<a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.title }}</a>{% else %}{{ project.title }}{% endif -%}
+        </h3>
+        <p class="project-desc">{{ project.description }}</p>
+        {%- if forloop.first %}
+        <div class="project-viz" aria-hidden="true">
+          {%- assign heights = "34,48,41,57,52,66,61,74,70,86,80,100" | split: "," %}
+          {%- for h in heights %}<span style="--h:{{ h }}%; transition-delay: {{ forloop.index0 | times: 50 }}ms"></span>{% endfor %}
+        </div>
         {%- endif %}
-      </h3>
-      <p class="project-desc">{{ project.description }}</p>
-      <div class="project-foot">
-        <ul class="tags">
-          {%- for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}
-        </ul>
-        {%- if project.url %}
-        <span class="project-arrow" aria-hidden="true">{% include icon.html name="arrow" %}</span>
-        {%- endif %}
-      </div>
-    </article>
-    {%- endfor %}
+        <div class="project-foot">
+          <span class="project-tags">{{ project.tags | join: " · " }}</span>
+          {%- if project.url %}
+          <span class="project-cta">View project {% include icon.html name="arrow-right" %}</span>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT (numbered rows) ============ -->
+<section id="about" class="section approach" aria-labelledby="about-title">
+  <div class="container section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">About me</span>
+      <h2 id="about-title">What I do. <span class="text-brand">Four threads.</span></h2>
+    </div>
+
+    <ol class="principles">
+      <li class="reveal">
+        <div class="principle tone-brand">
+          <span class="principle-num">01</span>
+          <div>
+            <h3>Analysis that ends in a decision.</h3>
+            <p>I'm an experienced analyst working in R, Python and SQL. I enjoy the moment a dataset stops being a spreadsheet and starts answering the question leadership actually asked.</p>
+            <span class="principle-label">Analyst</span>
+          </div>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="principle tone-free">
+          <span class="principle-num">02</span>
+          <div>
+            <h3>Dashboards people actually open.</h3>
+            <p>Power BI, Tableau and Flourish are how the work reaches people. I build reports and data stories designed to be read, not just published.</p>
+            <span class="principle-label">Business intelligence</span>
+          </div>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="principle tone-warning">
+          <span class="principle-num">03</span>
+          <div>
+            <h3>Upskilling teams, one cohort at a time.</h3>
+            <p>I advocate for data literacy among executives, analysts, consultants and professionals. To date I've onboarded <strong>more than 500 professionals</strong> onto SQL, Power BI and Tableau.</p>
+            <span class="principle-label">Educator</span>
+          </div>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="principle tone-success">
+          <span class="principle-num">04</span>
+          <div>
+            <h3>Cloud-minded, research-grounded.</h3>
+            <p>I work with Microsoft Fabric and have a working knowledge of cloud architecture. My master's research looked at how AI and machine learning can support universal health coverage in Malaysia.</p>
+            <span class="principle-label">Platforms &amp; research</span>
+          </div>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
 <!-- ============ TOOLKIT ============ -->
-<section id="toolkit" class="section container" aria-labelledby="toolkit-title">
-  <div class="section-head reveal">
-    <p class="eyebrow">03 — Toolkit</p>
-    <h2 id="toolkit-title">The tools I <em>reach for</em>.</h2>
-  </div>
-
-  <div class="toolkit">
-    {%- for group in site.data.skills %}
-    <div class="tool-group reveal">
-      <span class="tool-icon">{% include icon.html name=group.icon %}</span>
-      <h3>{{ group.group }}</h3>
-      <p>{{ group.summary }}</p>
-      <ul class="chips">
-        {%- for item in group.items %}<li>{{ item }}</li>{% endfor %}
-      </ul>
+<section id="toolkit" class="section" aria-labelledby="toolkit-title">
+  <div class="container section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">Toolkit</span>
+      <h2 id="toolkit-title">The tools I reach for.</h2>
     </div>
-    {%- endfor %}
+    <div class="features">
+      {%- for group in site.data.skills %}
+      <div class="card feature tone-{{ group.tone | default: 'brand' }} reveal">
+        <span class="feature-icon" aria-hidden="true">{% include icon.html name=group.icon %}</span>
+        <h3>{{ group.group }}</h3>
+        <p>{{ group.summary }}</p>
+        <ul class="chips">
+          {%- for item in group.items %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
   </div>
 </section>
 
 <!-- ============ WRITING ============ -->
 {%- if site.posts.size > 0 %}
-<section id="writing" class="section container" aria-labelledby="writing-title">
-  <div class="section-head section-head-row reveal">
-    <div>
-      <p class="eyebrow">04 — Writing</p>
-      <h2 id="writing-title">Notes &amp; <em>thoughts</em>.</h2>
+<section id="writing" class="section" aria-labelledby="writing-title">
+  <div class="container section-inner">
+    <div class="section-head section-head-row reveal">
+      <div>
+        <span class="eyebrow">Writing</span>
+        <h2 id="writing-title">Notes and thoughts.</h2>
+      </div>
+      <a class="text-link" href="{{ '/blog/' | relative_url }}">All posts {% include icon.html name="arrow-right" %}</a>
     </div>
-    <a class="text-link" href="{{ '/blog/' | relative_url }}">All posts {% include icon.html name="arrow-right" %}</a>
-  </div>
-
-  <ul class="post-list">
-    {%- for post in site.posts limit: 3 %}
-    <li class="reveal">
-      <a href="{{ post.url | relative_url }}">
+    <div class="posts">
+      {%- for post in site.posts limit: 3 %}
+      <article class="card post-card reveal">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <span class="post-list-title">{{ post.title }}</span>
-        <span class="post-list-arrow" aria-hidden="true">{% include icon.html name="arrow-right" %}</span>
-      </a>
-    </li>
-    {%- endfor %}
-  </ul>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 120 }}</p>
+        <span class="project-cta">Read post {% include icon.html name="arrow-right" %}</span>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
 </section>
 {%- endif %}
 
-<!-- ============ CONTACT ============ -->
-<section id="contact" class="section container" aria-labelledby="contact-title">
-  <div class="contact reveal">
-    <p class="eyebrow">Get in touch</p>
-    <h2 id="contact-title">Have a data problem, a dashboard idea, or a team to train?</h2>
-    <p>I'm always happy to chat about analytics, BI and data upskilling. The quickest way to reach me is LinkedIn.</p>
-    <a class="btn btn-light" href="{{ site.author.contact_url }}" target="_blank" rel="noopener">Say hello on LinkedIn {% include icon.html name="arrow" %}</a>
-    {% include social-links.html class="social-contact" %}
+<!-- ============ CTA ============ -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="container cta-wrap">
+    <div class="cta reveal">
+      <div class="cta-row">
+        <div>
+          <h2 id="contact-title">Have a data problem, a dashboard idea, or a team to train?</h2>
+          <p>I'm always happy to talk analytics, BI and data upskilling. The quickest way to reach me is LinkedIn.</p>
+        </div>
+        <a class="btn btn-brand" href="{{ site.author.contact_url }}" target="_blank" rel="noopener">Say hello {% include icon.html name="arrow-right" %}</a>
+      </div>
+      {% include social-links.html class="cta-social" %}
+    </div>
   </div>
 </section>
