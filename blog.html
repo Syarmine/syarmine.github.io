@@ -1,26 +1,24 @@
 ---
 layout: default
-title: Writing
+title: Analysis
 permalink: /blog/
 ---
-<section class="container narrow page-intro">
-  <span class="eyebrow">Writing</span>
-  <h1>Essays and notes.</h1>
-  <p>Health policy, AI in public institutions, evidence and decision-making, and how people learn hard skills.</p>
+<section class="container page-intro">
+  <span class="kicker">Archive</span>
+  <h1>Analysis</h1>
+  <p>Essays and briefings on health financing, public-sector technology, evidence and institutional capability.</p>
 </section>
 
-<section class="container narrow page-body">
+<section class="container page-body">
   {%- if site.posts.size > 0 %}
-  <ul class="post-list">
-    {%- for post in site.posts %}
-    <li class="card">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</p>
-    </li>
-    {%- endfor %}
-  </ul>
+  <div class="grid-3">
+    {%- for post in site.posts %}{% include analysis-card.html post=post %}{% endfor %}
+  </div>
+  {%- elsif site.show_samples %}
+  <div class="grid-3">
+    {%- for s in site.data.samples.analysis %}{% include analysis-card.html item=s %}{% endfor %}
+  </div>
   {%- else %}
-  <div class="card empty-card"><p><strong>First essays are in preparation.</strong> They will appear here as they are published.</p></div>
+  <div class="card empty-card"><p><strong>No analysis published yet.</strong></p></div>
   {%- endif %}
 </section>

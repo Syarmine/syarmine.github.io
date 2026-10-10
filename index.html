@@ -1,188 +1,126 @@
 ---
 layout: default
 ---
-<!-- ============ HERO ============ -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero-inner">
-    <span class="pill"><span class="dot" aria-hidden="true"></span>Health systems · Policy · AI · Institutions</span>
-    <h1 id="hero-title">
-      Most hard problems are institutional
-      <span class="text-brand">before they are technical.</span>
-    </h1>
-    <p class="hero-sub">
-      Work and writing on how health systems and organisations make decisions:
-      how they finance care, adopt new technology, weigh evidence and build the
-      people to do all three. Data matters. It is rarely the whole story.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-brand" href="{{ '/blog/' | relative_url }}">Read the writing {% include icon.html name="arrow-right" %}</a>
-      <a class="btn btn-outline" href="#focus">Areas of focus</a>
-    </div>
-  </div>
-</section>
+{%- assign samples = site.data.samples -%}
+{%- assign use_post_samples = false -%}
+{%- if site.posts.size == 0 and site.show_samples %}{% assign use_post_samples = true %}{% endif -%}
+{%- assign dashboards = site.data.dashboards -%}
+{%- assign use_chart_samples = false -%}
+{%- if dashboards.size == 0 and site.show_samples %}{% assign use_chart_samples = true %}{% endif -%}
 
-<!-- ============ MARQUEE ============ -->
-{%- assign topics = "Universal health coverage,Health financing,Public policy,AI adoption,Institutional design,Evidence and uncertainty,Decision quality,Implementation,Digital public infrastructure,Economics of care,Workforce capability,Learning systems" | split: "," %}
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    {%- for round in (1..2) %}{% for t in topics %}
-    <span>{{ t }}<span>✦</span></span>
-    {%- endfor %}{% endfor %}
-  </div>
-</div>
-
-<!-- ============ FOCUS ============ -->
-<section id="focus" class="section" aria-labelledby="focus-title">
-  <div class="container section-inner">
-    <div class="section-head reveal">
-      <span class="eyebrow">Areas of focus</span>
-      <h2 id="focus-title">Where the work sits.</h2>
-      <p>Four areas that overlap more than they look. Most interesting questions sit across at least two of them.</p>
-    </div>
-    <div class="features">
-      {%- for area in site.data.focus %}
-      <div class="card feature tone-{{ area.tone | default: 'brand' }} reveal">
-        <span class="feature-icon" aria-hidden="true">{% include icon.html name=area.icon %}</span>
-        <h3>{{ area.title }}</h3>
-        <p>{{ area.summary }}</p>
-        <ul class="chips">
-          {%- for t in area.topics %}<li>{{ t }}</li>{% endfor %}
-        </ul>
+<!-- ============ LEAD ============ -->
+<section class="lead" aria-labelledby="lead-title">
+  <div class="container lead-grid">
+    <div>
+      <div class="lead-rule" aria-hidden="true"></div>
+      <span class="kicker">Health systems · Policy · Technology</span>
+      <h1 id="lead-title">Health systems rarely fail for lack of data. They fail on financing, incentives and execution.</h1>
+      <p class="lead-rubric">Analysis of how governments and institutions pay for care, adopt technology and make decisions under uncertainty. Written for the people who have to make those decisions.</p>
+      <div class="lead-links">
+        <a class="text-link" href="#analysis">Latest analysis {% include icon.html name="arrow-right" %}</a>
+        <a class="text-link" href="{{ '/dashboard/' | relative_url }}">Charts {% include icon.html name="arrow-right" %}</a>
       </div>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ============ APPROACH ============ -->
-<section id="approach" class="section approach" aria-labelledby="approach-title">
-  <div class="container section-inner">
-    <div class="section-head reveal">
-      <span class="eyebrow">Approach</span>
-      <h2 id="approach-title">How I work. <span class="text-brand">Four commitments.</span></h2>
     </div>
 
-    <ol class="principles">
-      <li class="reveal">
-        <div class="principle tone-brand">
-          <span class="principle-num">01</span>
-          <div>
-            <h3>Start from the decision, not the dataset.</h3>
-            <p>Analysis earns its place by changing what someone does next. Begin with the choice on the table and work back to the evidence it needs.</p>
-            <span class="principle-label">Decisions</span>
-          </div>
-        </div>
-      </li>
-      <li class="reveal">
-        <div class="principle tone-free">
-          <span class="principle-num">02</span>
-          <div>
-            <h3>Look at the system before the fix.</h3>
-            <p>Most failures sit between organisations, budgets and incentives, not inside a single tool. Understand the system a problem lives in before proposing a solution to it.</p>
-            <span class="principle-label">Systems</span>
-          </div>
-        </div>
-      </li>
-      <li class="reveal">
-        <div class="principle tone-warning">
-          <span class="principle-num">03</span>
-          <div>
-            <h3>State the uncertainty.</h3>
-            <p>Good evidence comes with error bars. Saying what we do not know is part of the analysis, not a footnote to it.</p>
-            <span class="principle-label">Evidence</span>
-          </div>
-        </div>
-      </li>
-      <li class="reveal">
-        <div class="principle tone-success">
-          <span class="principle-num">04</span>
-          <div>
-            <h3>Build capability, not dependency.</h3>
-            <p>The test of any project is whether the institution can carry it on afterwards. Teaching and documentation are part of the delivery.</p>
-            <span class="principle-label">Capability</span>
-          </div>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ============ WORK ============ -->
-<section id="work" class="section" aria-labelledby="work-title">
-  <div class="container section-inner">
-    <div class="section-head reveal">
-      <span class="eyebrow">Work</span>
-      <h2 id="work-title">Research and applied work.</h2>
-      <p>Selected pieces. More will be added over time.</p>
-    </div>
-
-    <div class="bento bento-2">
-      {%- for project in site.data.projects %}
-      <article class="card project tone-{{ project.tone | default: 'brand' }} reveal">
-        <span class="card-glow" aria-hidden="true"></span>
-        <div class="project-badges">
-          <span class="badge badge-tone">{{ project.type }}</span>
-          <span class="badge">{{ project.year }}</span>
-        </div>
-        <h3>
-          {%- if project.url %}<a href="{{ project.url | relative_url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif -%}
-        </h3>
-        <p class="project-desc">{{ project.description }}</p>
-        <div class="project-foot">
-          <span class="project-tags">{{ project.tags | join: " · " }}</span>
-          {%- if project.url %}
-          <span class="project-cta">{{ project.cta | default: "View" }} {% include icon.html name="arrow-right" %}</span>
-          {%- endif %}
-        </div>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ============ WRITING ============ -->
-<section id="writing" class="section" aria-labelledby="writing-title">
-  <div class="container section-inner">
-    <div class="section-head section-head-row reveal">
-      <div>
-        <span class="eyebrow">Writing</span>
-        <h2 id="writing-title">Essays and notes.</h2>
-      </div>
-      {%- if site.posts.size > 0 %}
-      <a class="text-link" href="{{ '/blog/' | relative_url }}">All writing {% include icon.html name="arrow-right" %}</a>
-      {%- endif %}
-    </div>
-    {%- if site.posts.size > 0 %}
-    <div class="posts">
-      {%- for post in site.posts limit: 3 %}
-      <article class="card post-card reveal">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 120 }}</p>
-        <span class="project-cta">Read {% include icon.html name="arrow-right" %}</span>
-      </article>
-      {%- endfor %}
-    </div>
-    {%- else %}
-    <div class="card empty-card reveal">
-      <p><strong>First essays are in preparation.</strong> Expect pieces on health policy, AI in public institutions, evidence and decision-making, and how people learn hard skills.</p>
-    </div>
+    {%- if site.posts.size > 0 or use_post_samples %}
+    <aside class="latest" aria-labelledby="latest-title">
+      <h2 id="latest-title">Latest</h2>
+      <ol>
+        {%- if site.posts.size > 0 %}
+        {%- for post in site.posts limit: 4 %}
+        <li><span class="kicker">{{ post.kicker | default: post.tags.first | default: "Analysis" }}</span><a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a></li>
+        {%- endfor %}
+        {%- else %}
+        {%- for s in samples.analysis limit: 4 %}
+        <li class="tone-{{ s.tone }}"><span class="kicker">{{ s.kicker }}</span><h3>{{ s.title }}</h3></li>
+        {%- endfor %}
+        {%- endif %}
+      </ol>
+    </aside>
     {%- endif %}
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
-<section id="contact" aria-labelledby="contact-title">
-  <div class="container cta-wrap">
-    <div class="cta reveal">
-      <div class="cta-row">
-        <div>
-          <h2 id="contact-title">Working on something in health, policy or AI?</h2>
-          <p>Open to conversations on research, collaboration and writing. LinkedIn is the most reliable way to reach me.</p>
-        </div>
-        <a class="btn btn-brand" href="{{ site.author.contact_url }}" target="_blank" rel="noopener">Send a message {% include icon.html name="arrow-right" %}</a>
+<!-- ============ ANALYSIS ============ -->
+<section id="analysis" class="band" aria-labelledby="analysis-title">
+  <div class="container">
+    <div class="band-head">
+      <div>
+        <span class="kicker">Analysis</span>
+        <h2 id="analysis-title">Essays and briefings</h2>
       </div>
-      {% include social-links.html class="cta-social" %}
+      <div class="band-controls">
+        <a class="text-link" href="{{ '/blog/' | relative_url }}">All</a>
+        <button class="icon-btn" type="button" data-carousel-prev="analysis-track" aria-label="Previous">{% include icon.html name="arrow-left" %}</button>
+        <button class="icon-btn" type="button" data-carousel-next="analysis-track" aria-label="Next">{% include icon.html name="arrow-right" %}</button>
+      </div>
+    </div>
+    {%- if site.posts.size > 0 %}
+    <div class="carousel" id="analysis-track">
+      {%- for post in site.posts limit: 8 %}{% include analysis-card.html post=post %}{% endfor %}
+    </div>
+    {%- elsif use_post_samples %}
+    <div class="carousel" id="analysis-track">
+      {%- for s in samples.analysis %}{% include analysis-card.html item=s %}{% endfor %}
+    </div>
+    {%- else %}
+    <div class="card empty-card"><p><strong>No analysis published yet.</strong></p></div>
+    {%- endif %}
+  </div>
+</section>
+
+<!-- ============ CHARTS ============ -->
+<section id="charts" class="band" aria-labelledby="charts-title">
+  <div class="container">
+    <div class="band-head">
+      <div>
+        <span class="kicker">Charts</span>
+        <h2 id="charts-title">The numbers behind the argument</h2>
+      </div>
+      <div class="band-controls">
+        <a class="text-link" href="{{ '/dashboard/' | relative_url }}">All</a>
+        <button class="icon-btn" type="button" data-carousel-prev="charts-track" aria-label="Previous">{% include icon.html name="arrow-left" %}</button>
+        <button class="icon-btn" type="button" data-carousel-next="charts-track" aria-label="Next">{% include icon.html name="arrow-right" %}</button>
+      </div>
+    </div>
+    {%- if dashboards.size > 0 %}
+    <div class="carousel carousel-wide" id="charts-track">
+      {%- for d in dashboards %}{% include chart-card.html item=d %}{% endfor %}
+    </div>
+    {%- elsif use_chart_samples %}
+    <div class="carousel carousel-wide" id="charts-track">
+      {%- for c in samples.charts %}{% include chart-card.html item=c sample=true %}{% endfor %}
+    </div>
+    {%- else %}
+    <div class="card empty-card"><p><strong>No charts published yet.</strong></p></div>
+    {%- endif %}
+  </div>
+</section>
+
+<!-- ============ RESEARCH + ABOUT ============ -->
+<section id="research" class="band" aria-labelledby="research-title">
+  <div class="container split">
+    <div>
+      <div class="band-head"><div><span class="kicker">Research</span><h2 id="research-title">Research</h2></div></div>
+      <ul class="rows">
+        <li>
+          <div class="row">
+            <h3>Artificial intelligence and machine learning for universal health coverage in Malaysia</h3>
+            <span class="year">2023</span>
+            <p>Review of AI and ML applied to health financing and development decisions. All twelve included studies ran on-premise and stopped at the research-model stage. The gap between a working model and a working programme is the finding that matters.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="contact">
+      <div class="band-head"><div><span class="kicker">About</span><h2>About</h2></div></div>
+      <p class="about-note"><strong>{{ site.author.name }}</strong> writes on health financing, public-sector technology and how institutions decide. The work draws on health economics, data analysis and time spent building capability inside organisations.</p>
+      <p class="about-note">Correspondence and collaboration requests are welcome.</p>
+      <div class="contact-line">
+        {%- if site.social.linkedin %}<a href="{{ site.social.linkedin }}" target="_blank" rel="noopener me">{% include icon.html name="linkedin" %}LinkedIn</a>{% endif %}
+        {%- if site.social.github %}<a href="{{ site.social.github }}" target="_blank" rel="noopener me">{% include icon.html name="github" %}GitHub</a>{% endif %}
+        {%- if site.social.twitter %}<a href="{{ site.social.twitter }}" target="_blank" rel="noopener me">{% include icon.html name="twitter" %}X</a>{% endif %}
+      </div>
     </div>
   </div>
 </section>

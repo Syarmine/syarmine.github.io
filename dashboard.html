@@ -1,34 +1,26 @@
 ---
 layout: default
-title: Dashboards
+title: Charts
 permalink: /dashboard/
 ---
 <section class="container page-intro">
-  <span class="eyebrow">Dashboards</span>
-  <h1>Dashboard gallery.</h1>
-  <p>Worked examples on public data. Each one starts from a question and shows only what is needed to answer it.</p>
+  <span class="kicker">Charts</span>
+  <h1>Charts and dashboards</h1>
+  <p>Worked examples on public data. Each starts from a question and shows only what is needed to answer it.</p>
 </section>
 
 <section class="container page-body">
   {%- assign dashboards = site.data.dashboards %}
   {%- if dashboards and dashboards.size > 0 %}
-  <div class="bento">
-    {%- for d in dashboards %}
-    <article class="card project tone-{{ d.tone | default: 'brand' }}">
-      <span class="card-glow" aria-hidden="true"></span>
-      <h3><a href="{{ d.url | relative_url }}">{{ d.title }}</a></h3>
-      <p class="project-desc">{{ d.question }}</p>
-      <div class="project-foot">
-        <span class="project-tags">{{ d.tags | join: " · " }}</span>
-        <span class="project-cta">Open {% include icon.html name="arrow-right" %}</span>
-      </div>
-    </article>
-    {%- endfor %}
+  <div class="grid-3">
+    {%- for d in dashboards %}{% include chart-card.html item=d %}{% endfor %}
+  </div>
+  {%- elsif site.show_samples %}
+  <!-- Samples. Add entries to _data/dashboards.yml to replace them. -->
+  <div class="grid-3">
+    {%- for c in site.data.samples.charts %}{% include chart-card.html item=c sample=true %}{% endfor %}
   </div>
   {%- else %}
-  <!-- Placeholder. Add entries to _data/dashboards.yml to populate this page. -->
-  <div class="card empty-card">
-    <p><strong>Nothing published yet.</strong> Examples will appear here as they are built.</p>
-  </div>
+  <div class="card empty-card"><p><strong>Nothing published yet.</strong></p></div>
   {%- endif %}
 </section>

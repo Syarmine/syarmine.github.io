@@ -34,6 +34,30 @@
     });
   }
 
+  // ---- Carousels ----
+  // Prev/next buttons scroll one card at a time and disable at either end.
+  function setupCarousel(track) {
+    var prev = document.querySelector('[data-carousel-prev="' + track.id + '"]');
+    var next = document.querySelector('[data-carousel-next="' + track.id + '"]');
+    function step() {
+      var card = track.firstElementChild;
+      if (!card) return track.clientWidth;
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card.getBoundingClientRect().width + gap;
+    }
+    function update() {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = track.scrollLeft >= max;
+    }
+    if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.carousel[id]'), setupCarousel);
+
   // ---- Reveal on scroll ----
   // Reveal anything that has entered (or already passed) the viewport, so
   // fast jumps via anchor links never leave content hidden above the fold.

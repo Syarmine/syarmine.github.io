@@ -1,0 +1,29 @@
+{%- comment -%}
+  One analysis card. Pass either post=<post> or item=<sample>.
+{%- endcomment -%}
+{%- if include.post -%}
+{%- assign p = include.post -%}
+{%- assign words = p.content | number_of_words -%}
+{%- assign minutes = words | divided_by: 220 | plus: 1 -%}
+{%- assign chart = p.chart | default: "line" -%}
+<article class="card is-link tone-{{ p.tone | default: 'brand' }}">
+  <div class="card-media">{% include mini-chart.html type=chart %}</div>
+  <div class="card-body">
+    <span class="kicker">{{ p.kicker | default: p.tags.first | default: "Analysis" }}</span>
+    <h3><a class="stretched" href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    <p>{{ p.rubric | default: p.excerpt | strip_html | strip_newlines | truncate: 120 }}</p>
+    <div class="card-meta"><span>{{ p.date | date: "%b %-d, %Y" }} · {{ minutes }} min read</span><span class="go">{% include icon.html name="arrow-right" %}</span></div>
+  </div>
+</article>
+{%- else -%}
+{%- assign s = include.item -%}
+<article class="card is-link tone-{{ s.tone | default: 'brand' }}">
+  <div class="card-media">{% include mini-chart.html type=s.chart %}<span class="badge">Sample</span></div>
+  <div class="card-body">
+    <span class="kicker">{{ s.kicker }}</span>
+    <h3 tabindex="0">{{ s.title }}</h3>
+    <p>{{ s.rubric }}</p>
+    <div class="card-meta"><span>{{ s.minutes }} min read</span><span class="go">{% include icon.html name="arrow-right" %}</span></div>
+  </div>
+</article>
+{%- endif -%}
