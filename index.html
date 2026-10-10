@@ -26,7 +26,7 @@ layout: default
       <h2 id="latest-title">Latest</h2>
       <ol>
         {%- for post in posts limit: 4 %}
-        <li class="tone-{{ post.tone | default: 'brand' }}"><span class="kicker">{{ post.kicker | default: "Analysis" }}{% if post.sample %} · Sample{% endif %}</span><a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a></li>
+        <li class="tone-{{ post.tone | default: 'brand' }}"><span class="kicker">{{ post.kicker | default: "Analysis" }}</span><a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a></li>
         {%- endfor %}
       </ol>
     </aside>

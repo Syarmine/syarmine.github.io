@@ -25,8 +25,8 @@ social:
   twitter: "https://twitter.com/SyarmineS"
 
 # Sample content. While true, sample articles (posts with `sample: true`) and
-# sample chart cards are shown, each clearly badged "Sample". Set to false to
-# hide them everywhere once real content is in place.
+# sample chart cards are shown. Their charts are labelled "Illustrative data".
+# Set to false to hide them everywhere once real content is in place.
 show_samples: true
 
 # Google Analytics (GA4) measurement ID. Leave empty to disable.

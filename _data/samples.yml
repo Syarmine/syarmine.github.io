@@ -1,6 +1,6 @@
 # Sample chart cards, shown only while `show_samples: true` in _config.yml and
-# only until _data/dashboards.yml has real entries. Each renders with a
-# "Sample" badge and no link. Sample articles live in _posts/ (sample: true).
+# only until _data/dashboards.yml has real entries. Each renders without a
+# link and with "Illustrative data" as its source. Sample articles live in _posts/ (sample: true).
 
 charts:
   - kicker: "Economics"

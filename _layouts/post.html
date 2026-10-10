@@ -6,9 +6,6 @@ layout: default
 <article class="post container narrow tone-{{ page.tone | default: 'brand' }}">
   <a class="back-link" href="{{ '/blog/' | relative_url }}">{% include icon.html name="arrow-left" %} All analysis</a>
 
-  {%- if page.sample %}
-  <p class="sample-banner"><strong>Sample article.</strong> This page previews the layout. Its argument is a draft and its charts use illustrative data.</p>
-  {%- endif %}
 
   <header class="post-header">
     <span class="kicker">{{ page.kicker | default: "Analysis" }}</span>

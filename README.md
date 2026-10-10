@@ -41,10 +41,14 @@ Add a figure anywhere in the article body:
 ```liquid
 {% include figure.html chart="line" title="Chart title" subtitle="What it shows" source="Where the data comes from" %}
 {% include figure.html image="/assets/uploads/my-chart.png" title="Chart title" source="Source" %}
+{% include figure.html embed="https://datawrapper.dwcdn.net/AbCdE/1/" height="460" title="Chart title" source="Source" %}
 ```
 
-The first draws a built-in illustrative chart; the second shows an uploaded image (for example an
-export from Datawrapper, Flourish or Power BI).
+- `chart=` draws a built-in **illustrative** shape. It is not data; use it only as decoration.
+- `image=` shows an uploaded chart image (an export from Datawrapper, Flourish, Power BI, R or Python).
+- `embed=` shows a live, interactive chart from Datawrapper, Flourish or a Power BI "Publish to web" link.
+
+Anything that states real figures should use `image` or `embed`, with the real source in `source=`.
 
 ### Sample content
 

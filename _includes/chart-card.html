@@ -1,13 +1,12 @@
 {%- comment -%}
   One chart card. Pass item=<entry from _data/dashboards.yml or samples.charts>
-  and sample=true for sample entries (no link, "Sample" badge).
+  and sample=true for sample entries (rendered without a link).
 {%- endcomment -%}
 {%- assign c = include.item -%}
 {%- assign chart = c.chart | default: "line" -%}
 <article class="card chart-card is-link tone-{{ c.tone | default: 'brand' }}">
   <div class="card-media{% if c.image %} has-image{% endif %}">
     {%- if c.image %}<img src="{{ c.image | relative_url }}" alt="" loading="lazy">{% else %}{% include mini-chart.html type=chart %}{% endif -%}
-    {%- if include.sample %}<span class="badge">Sample</span>{% endif -%}
   </div>
   <div class="card-body">
     <span class="kicker">{{ c.kicker }}</span>
