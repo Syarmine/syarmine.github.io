@@ -1,0 +1,35 @@
+# "Areas of focus" cards on the home page.
+# icon: one of the names in _includes/icon.html; tone: brand | free | warning | success
+
+- title: "Health systems and financing"
+  icon: pulse
+  tone: brand
+  summary: >-
+    Universal health coverage, purchasing and the trade-offs behind who gets
+    which care, at what cost, and who pays for it.
+  topics: ["UHC", "Health financing", "Public policy"]
+
+- title: "AI and institutions"
+  icon: spark
+  tone: free
+  summary: >-
+    What changes when organisations adopt AI, what does not, and why most of
+    the difficulty sits in governance, incentives and workflow rather than in
+    the model.
+  topics: ["AI adoption", "Governance", "Digital infrastructure"]
+
+- title: "Evidence and decisions"
+  icon: chart
+  tone: warning
+  summary: >-
+    Turning imperfect evidence into decisions that hold up, with the
+    uncertainty stated plainly instead of hidden behind a chart.
+  topics: ["Evaluation", "Analytics", "Decision quality"]
+
+- title: "Capability and learning"
+  icon: people
+  tone: success
+  summary: >-
+    Building the skills inside teams and institutions to keep doing this work
+    without outside help.
+  topics: ["Workforce", "Education", "Leadership"]

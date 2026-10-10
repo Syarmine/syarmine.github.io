@@ -1,0 +1,9 @@
+# Dashboard gallery shown at /dashboard/.
+# Empty for now: the page shows a placeholder until entries are added.
+# Example entry:
+# - title: "Health spending across ASEAN"
+#   question: "How has out-of-pocket spending changed since 2010?"
+#   url: "/dashboard/health-spending/"
+#   tags: ["Health financing", "Public data"]
+#   tone: brand
+[]

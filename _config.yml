@@ -2,35 +2,29 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Data Analyst & Data Educator"
+tagline: "Health systems, policy, AI and institutions"
 description: >-
-  Personal portfolio of Syarmine Shah — a Kuala Lumpur based data analyst
-  working with R, Python, SQL, Microsoft Fabric, Power BI and Tableau.
+  Writing and work on how health systems and institutions make decisions,
+  and how evidence, technology and capability change what they can do.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en
 
 # ------------------------------------------------------------------
-# About you — used across the home page
+# Site owner, used in the footer, post bylines and the contact panel
 # ------------------------------------------------------------------
 author:
   name: "Syarmine Shah"
-  role: "Data Analyst"
-  location: "Kuala Lumpur, Malaysia"
-  avatar: "/images/avatar.jpg"
-  # The primary "Let's talk" button points here
+  # The primary contact button points here
   contact_url: "https://www.linkedin.com/in/drsyarmine-shah/"
-  # Set to false to hide the "open to opportunities" badge
-  available: true
 
-# Social links — remove a line to hide it
+# Social links. Remove a line to hide it.
 social:
   linkedin: "https://www.linkedin.com/in/drsyarmine-shah/"
   github: "https://github.com/Syarmine"
   twitter: "https://twitter.com/SyarmineS"
-  tableau: "https://public.tableau.com/app/profile/muhammad.syarmine.bin.mohd.shah"
 
-# Google Analytics (GA4) measurement ID — leave empty to disable
+# Google Analytics (GA4) measurement ID. Leave empty to disable.
 google_analytics: "G-YYY2YQEEPB"
 
 # ------------------------------------------------------------------

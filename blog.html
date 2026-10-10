@@ -5,11 +5,11 @@ permalink: /blog/
 ---
 <section class="container narrow page-intro">
   <span class="eyebrow">Writing</span>
-  <h1>Notes and thoughts.</h1>
-  <p>Occasional writing on data, analytics, BI and learning in public.</p>
+  <h1>Essays and notes.</h1>
+  <p>Health policy, AI in public institutions, evidence and decision-making, and how people learn hard skills.</p>
 </section>
 
-<section class="container narrow">
+<section class="container narrow page-body">
   {%- if site.posts.size > 0 %}
   <ul class="post-list">
     {%- for post in site.posts %}
@@ -21,6 +21,6 @@ permalink: /blog/
     {%- endfor %}
   </ul>
   {%- else %}
-  <p class="muted">No posts yet. Check back soon.</p>
+  <div class="card empty-card"><p><strong>First essays are in preparation.</strong> They will appear here as they are published.</p></div>
   {%- endif %}
 </section>

@@ -5,15 +5,16 @@
     <div class="footer-grid">
       <div class="footer-about">
         {% include wordmark.html %}
-        <p>{{ site.author.role }} and data educator. Helping professionals turn data into decisions with SQL, Power BI and Tableau.</p>
+        <p>{{ site.description }}</p>
       </div>
       <div class="footer-col">
         <h4>Site</h4>
         <ul>
-          <li><a href="{{ anchor }}#about">About</a></li>
+          <li><a href="{{ anchor }}#focus">Focus</a></li>
+          <li><a href="{{ anchor }}#approach">Approach</a></li>
           <li><a href="{{ anchor }}#work">Work</a></li>
-          <li><a href="{{ anchor }}#toolkit">Toolkit</a></li>
           <li><a href="{{ '/blog/' | relative_url }}">Writing</a></li>
+          <li><a href="{{ '/dashboard/' | relative_url }}">Dashboards</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -22,13 +23,12 @@
           {%- if site.social.linkedin %}<li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener me">LinkedIn</a></li>{% endif %}
           {%- if site.social.github %}<li><a href="{{ site.social.github }}" target="_blank" rel="noopener me">GitHub</a></li>{% endif %}
           {%- if site.social.twitter %}<li><a href="{{ site.social.twitter }}" target="_blank" rel="noopener me">X / Twitter</a></li>{% endif %}
-          {%- if site.social.tableau %}<li><a href="{{ site.social.tableau }}" target="_blank" rel="noopener me">Tableau Public</a></li>{% endif %}
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</p>
-      <p>Made in Kuala Lumpur</p>
+      <p>{{ site.tagline }}</p>
     </div>
   </div>
 </footer>

@@ -1,34 +1,26 @@
-# Featured work shown on the home page.
-# Fields: title, type, year, url (optional), description, tags, tone (brand | free | warning | success)
+# Work shown on the home page.
+# Fields: title, type, year, url (optional), cta (optional link label),
+#         description, tags, tone (brand | free | warning | success)
 
-- title: "Insurance Aggregate Data — Annual Report"
-  type: "Tableau Public"
-  year: "Ongoing"
-  url: https://public.tableau.com/app/profile/muhammad.syarmine.bin.mohd.shah/viz/InsuranceAggregateDataAnnualReport/Dashboard1
-  description: >-
-    Inspired by how the Bank of England uses Tableau to publish its findings.
-    A replication of the BoE's annual statistics release built from PRA
-    regulatory data.
-  tags: ["Tableau", "Financial regulation", "Dashboard"]
-  tone: brand
-
-- title: "Anthropocene Insights: World Population Trends"
-  type: "Flourish Studio"
-  year: "Ongoing"
-  url: https://public.flourish.studio/visualisation/12393682/
-  description: >-
-    A racing bar chart tracing how each country's population has grown over
-    time — up to the moment the world reached 8 billion people in November 2022.
-  tags: ["Flourish", "Time series", "Storytelling"]
-  tone: warning
-
-- title: "AI & Machine Learning for Universal Health Coverage in Malaysia"
-  type: "Master's dissertation"
+- title: "AI and machine learning for universal health coverage in Malaysia"
+  type: "Research"
   year: "2023"
   description: >-
-    A literature review of AI and ML in health financing and development
-    decisions. All twelve included studies ran on on-premise software at the
-    research-model stage — which points to real potential for cloud solutions
-    to bring scale to real-world use.
-  tags: ["Research", "Health economics", "AI / ML"]
+    A review of how AI and machine learning have been applied to health
+    financing and development decisions. All twelve included studies ran
+    on-premise and stopped at the research-model stage. The distance between a
+    working model and a working programme turned out to be the more useful
+    finding.
+  tags: ["Health financing", "AI", "UHC"]
+  tone: brand
+
+- title: "Example dashboards"
+  type: "Dashboards"
+  year: "In preparation"
+  url: "/dashboard/"
+  cta: "Open gallery"
+  description: >-
+    A small gallery of worked examples on public data, each paired with the
+    question it is meant to answer.
+  tags: ["Public data", "Worked examples"]
   tone: free
