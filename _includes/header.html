@@ -1,0 +1,31 @@
+{%- assign home = '/' | relative_url -%}
+{%- if page.url == '/' %}{% assign anchor = '' %}{% else %}{% assign anchor = home %}{% endif -%}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    {% include wordmark.html %}
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="{{ anchor }}#analysis">Analysis</a>
+      <a href="{{ '/dashboard/' | relative_url }}"{% if page.url contains '/dashboard/' %} aria-current="page"{% endif %}>Charts</a>
+      <a href="{{ anchor }}#research">Research</a>
+      <a href="{{ anchor }}#contact">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <span class="when-light">{% include icon.html name="moon" %}</span>
+        <span class="when-dark">{% include icon.html name="sun" %}</span>
+      </button>
+      <button class="theme-toggle menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        {% include icon.html name="menu" %}
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav container" aria-label="Mobile" hidden>
+    <a href="{{ anchor }}#analysis">Analysis</a>
+    <a href="{{ '/dashboard/' | relative_url }}"{% if page.url contains '/dashboard/' %} aria-current="page"{% endif %}>Charts</a>
+    <a href="{{ anchor }}#research">Research</a>
+    <a href="{{ anchor }}#contact">About</a>
+  </nav>
+</header>

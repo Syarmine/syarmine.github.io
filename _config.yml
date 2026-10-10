@@ -1,73 +1,43 @@
+# ------------------------------------------------------------------
 # Site settings
-title: "Syarmine Shah 📊"
-description: "A Github Page for my resume"
+# ------------------------------------------------------------------
+title: "Syarmine Shah"
+tagline: "Health systems, policy and technology"
+description: >-
+  Analysis of how governments and institutions pay for care, adopt
+  technology and make decisions under uncertainty.
+url: "https://syarmine.github.io"
+baseurl: ""
+lang: en
 
+# ------------------------------------------------------------------
+# Site owner, used in the footer, post bylines and the contact panel
+# ------------------------------------------------------------------
+author:
+  name: "Syarmine Shah"
+  # The primary contact button points here
+  contact_url: "https://www.linkedin.com/in/drsyarmine-shah/"
+
+# Social links. Remove a line to hide it.
+social:
+  linkedin: "https://www.linkedin.com/in/drsyarmine-shah/"
+  github: "https://github.com/Syarmine"
+  twitter: "https://twitter.com/SyarmineS"
+
+# Preview content. While true, sample cards (clearly badged "Sample") fill
+# the analysis and chart carousels until real posts and dashboards exist.
+# Set to false before publishing.
+show_samples: false
+
+# Google Analytics (GA4) measurement ID. Leave empty to disable.
+google_analytics: "G-YYY2YQEEPB"
+
+# ------------------------------------------------------------------
 # Build settings
+# ------------------------------------------------------------------
 markdown: kramdown
-sass:
-  sass_dir: _sass
-  style: compressed
+permalink: /blog/:year/:month/:title/
 
-# Resume settings
-resume_avatar:                  "true"
-resume_name:                    "Syarmine Shah"
-resume_title:                   "About Me"
-
-# used for the contact button in _layouts/resume.html
-resume_contact_email:           "https://www.linkedin.com/in/drsyarmine-shah"
-
-# the next two items are used for schema itemprops in _layouts/resume.html
-resume_contact_telephone:       ""
-resume_contact_address:         "Kuala Lumpur, Malaysia"
-
-resume_header_contact_info:     "Hi👋! I'm Syarmine Shah, welcome to my website."
-display_header_contact_info:    "true"
-
-resume_header_intro: |
-  <p>
-    <li> Syarmine Shah is an experienced analyst with a strong skillset in R, Python, SQL, Microsoft Fabric, Microsoft PowerBI, Tableau, and working knowledge of cloud architecture.</li>
-    <br>
-    <li> He loves to advocate more executives, analysts, consultants, and professionals in data upskilling journey. To date, he has onboarded over 500 professionals on SQL, PowerBI, and Tableau.</li>
-    <br>
-  </p>
-# use "yes" to display the email contact button,
-# "no" to display an "I'm not looking for work" message,
-# or remove the resume_looking_for_work option entirely
-# to leave blank
-resume_looking_for_work:        "yes"
-
-# Decide which sections to use
-# comment out to hide
-resume_section_experience:      false
-resume_section_education:       false
-resume_section_projects:        true
-resume_section_skills:          false
-resume_section_recognition:     false
-resume_section_links:           false
-resume_section_associations:    false
-# resume_section_interests:       true
-
-# Resume social links
-# uncomment the options you wish to display, and add your own URL
-resume_social_links:
-  resume_github_url:            "https://github.com/Syarmine"
-  resume_twitter_url:           "http://twitter.com/SyarmineS"
-  resume_dribbble_url:          false
-  # resume_facebook_url:          "insert Facebook URL here"
-  resume_linkedin_url:          "https://www.linkedin.com/in/drsyarmine-shah/"
-  # resume_instagram_url:         "insert your Instagram URL here"
-  resume_website_url:           false
-  resume_medium_url:            false
-resume_print_social_links:      true
-
-# Design settings
-resume_theme:                   default
-
-# Blog settings
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-# Set your default layouts for posts
 defaults:
   - scope:
       path: ""
@@ -75,7 +45,12 @@ defaults:
     values:
       layout: post
 
-
-# Note: when editing locally, remember to restart
-# your Jekyll server when you edit this file. Changes
-# to _config.yml are only recognized when the server starts
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - .dockerignore
+  - _vendor
+  - vendor

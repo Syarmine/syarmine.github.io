@@ -1,0 +1,45 @@
+{%- comment -%}
+  Illustrative chart thumbnails for cards (not real data).
+  Usage: {% include mini-chart.html type="line" %}
+  Types: line, bars, stacked, hbar, area, dots
+  Colours come from the card's --tone via currentColor.
+{%- endcomment -%}
+<svg viewBox="0 0 240 110" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <g stroke="currentColor" stroke-opacity=".14" stroke-width="1">
+    <line x1="0" y1="27" x2="240" y2="27"/><line x1="0" y1="54" x2="240" y2="54"/><line x1="0" y1="81" x2="240" y2="81"/>
+  </g>
+  <line x1="0" y1="109.5" x2="240" y2="109.5" stroke="currentColor" stroke-opacity=".45"/>
+{%- case include.type -%}
+{%- when "line" %}
+  <polyline points="0,92 30,88 60,84 90,79 120,70 150,66 180,52 210,44 240,30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="0,98 30,97 60,95 90,95 120,92 150,90 180,88 210,86 240,84" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="240" cy="30" r="4" fill="currentColor"/>
+{%- when "bars" %}
+  {%- assign hs = "38,46,44,58,63,61,72,80,95" | split: "," %}
+  {%- for h in hs %}{% assign x = forloop.index0 | times: 26 | plus: 4 %}{% assign y = 110 | minus: h %}
+  <rect x="{{ x }}" y="{{ y }}" width="18" height="{{ h }}" rx="2" fill="currentColor" fill-opacity="{% if forloop.last %}1{% else %}.35{% endif %}"/>
+  {%- endfor %}
+{%- when "stacked" %}
+  {%- assign a = "40,30,52,22,35,46" | split: "," %}{% assign b = "30,42,20,48,38,26" | split: "," %}
+  {%- for h in a %}{% assign i = forloop.index0 %}{% assign x = i | times: 40 | plus: 6 %}{% assign h2 = b[i] | plus: 0 %}{% assign h1 = h | plus: 0 %}{% assign y1 = 110 | minus: h1 %}{% assign y2 = y1 | minus: h2 %}{% assign rest = y2 | minus: 8 %}
+  <rect x="{{ x }}" y="{{ y1 }}" width="28" height="{{ h1 }}" fill="currentColor"/>
+  <rect x="{{ x }}" y="{{ y2 }}" width="28" height="{{ h2 }}" fill="currentColor" fill-opacity=".45"/>
+  <rect x="{{ x }}" y="8" width="28" height="{{ rest }}" fill="currentColor" fill-opacity=".15"/>
+  {%- endfor %}
+{%- when "hbar" %}
+  {%- assign ws = "220,168,131,96,64,38" | split: "," %}
+  {%- for w in ws %}{% assign y = forloop.index0 | times: 17 | plus: 6 %}
+  <rect x="0" y="{{ y }}" width="{{ w }}" height="11" rx="2" fill="currentColor" fill-opacity="{% if forloop.first %}1{% else %}.4{% endif %}"/>
+  {%- endfor %}
+{%- when "area" %}
+  <path d="M0,96 L30,94 60,90 90,86 120,78 150,70 180,58 210,46 240,34 L240,110 L0,110 Z" fill="currentColor" fill-opacity=".18"/>
+  <path d="M0,96 L30,94 60,90 90,86 120,78 150,70 180,58 210,46 240,34" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="150" y1="0" x2="150" y2="110" stroke="currentColor" stroke-opacity=".5" stroke-dasharray="3 4"/>
+{%- when "dots" %}
+  {%- assign pts = "18,88 34,80 52,84 70,70 86,74 102,62 120,66 136,52 150,58 168,44 184,48 200,36 216,40 230,26" | split: " " %}
+  {%- for p in pts %}{% assign xy = p | split: "," %}
+  <circle cx="{{ xy[0] }}" cy="{{ xy[1] }}" r="4.5" fill="currentColor" fill-opacity="{% cycle '.9', '.45' %}"/>
+  {%- endfor %}
+  <line x1="10" y1="92" x2="236" y2="24" stroke="currentColor" stroke-width="2" stroke-opacity=".6" stroke-dasharray="4 4"/>
+{%- endcase %}
+</svg>
