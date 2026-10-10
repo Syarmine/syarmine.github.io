@@ -1,13 +1,25 @@
 ---
 layout: default
 ---
-<article class="post container narrow">
-  <a class="back-link" href="{{ '/blog/' | relative_url }}">{% include icon.html name="arrow-left" %} All writing</a>
+{%- assign words = page.content | number_of_words -%}
+{%- assign minutes = words | divided_by: 220 | plus: 1 -%}
+<article class="post container narrow tone-{{ page.tone | default: 'brand' }}">
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">{% include icon.html name="arrow-left" %} All analysis</a>
+
+  {%- if page.sample %}
+  <p class="sample-banner"><strong>Sample article.</strong> This page previews the layout. Its argument is a draft and its charts use illustrative data.</p>
+  {%- endif %}
 
   <header class="post-header">
-    <span class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.tags.size > 0 %} · {{ page.tags | join: ", " }}{% endif %}</span>
+    <span class="kicker">{{ page.kicker | default: "Analysis" }}</span>
     <h1 class="post-title">{{ page.title }}</h1>
+    {%- if page.rubric %}<p class="post-rubric">{{ page.rubric }}</p>{% endif %}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {{ minutes }} min read</p>
   </header>
+
+  {%- if page.image %}
+  <img class="post-hero" src="{{ page.image | relative_url }}" alt="">
+  {%- endif %}
 
   <div class="prose">
     {{ content }}

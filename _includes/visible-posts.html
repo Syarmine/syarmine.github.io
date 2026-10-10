@@ -1,0 +1,9 @@
+{%- comment -%}
+  Sets `posts` to the posts that should be listed: all posts when
+  show_samples is true, otherwise only posts without `sample: true`.
+{%- endcomment -%}
+{%- if site.show_samples -%}
+{%- assign posts = site.posts -%}
+{%- else -%}
+{%- assign posts = site.posts | where_exp: "p", "p.sample != true" -%}
+{%- endif -%}

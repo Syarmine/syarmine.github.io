@@ -6,17 +6,14 @@ permalink: /blog/
 <section class="container page-intro">
   <span class="kicker">Archive</span>
   <h1>Analysis</h1>
-  <p>Essays and briefings on health financing, public-sector technology, evidence and institutional capability.</p>
+  <p>Essays and briefings on economics, technology, institutions and decision-making.</p>
 </section>
 
 <section class="container page-body">
-  {%- if site.posts.size > 0 %}
+  {%- include visible-posts.html %}
+  {%- if posts.size > 0 %}
   <div class="grid-3">
-    {%- for post in site.posts %}{% include analysis-card.html post=post %}{% endfor %}
-  </div>
-  {%- elsif site.show_samples %}
-  <div class="grid-3">
-    {%- for s in site.data.samples.analysis %}{% include analysis-card.html item=s %}{% endfor %}
+    {%- for post in posts %}{% include analysis-card.html post=post %}{% endfor %}
   </div>
   {%- else %}
   <div class="card empty-card"><p><strong>No analysis published yet.</strong></p></div>

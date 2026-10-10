@@ -2,10 +2,10 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Health systems, policy and technology"
+tagline: "Economics, technology and institutions"
 description: >-
-  Analysis of how governments and institutions pay for care, adopt
-  technology and make decisions under uncertainty.
+  Essays and analysis on economics, technology, institutions and how
+  decisions get made.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en
@@ -24,10 +24,10 @@ social:
   github: "https://github.com/Syarmine"
   twitter: "https://twitter.com/SyarmineS"
 
-# Preview content. While true, sample cards (clearly badged "Sample") fill
-# the analysis and chart carousels until real posts and dashboards exist.
-# Set to false before publishing.
-show_samples: false
+# Sample content. While true, sample articles (posts with `sample: true`) and
+# sample chart cards are shown, each clearly badged "Sample". Set to false to
+# hide them everywhere once real content is in place.
+show_samples: true
 
 # Google Analytics (GA4) measurement ID. Leave empty to disable.
 google_analytics: "G-YYY2YQEEPB"
@@ -54,3 +54,4 @@ exclude:
   - .dockerignore
   - _vendor
   - vendor
+  - .pages.yml

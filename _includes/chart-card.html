@@ -5,7 +5,10 @@
 {%- assign c = include.item -%}
 {%- assign chart = c.chart | default: "line" -%}
 <article class="card chart-card is-link tone-{{ c.tone | default: 'brand' }}">
-  <div class="card-media">{% include mini-chart.html type=chart %}{% if include.sample %}<span class="badge">Sample</span>{% endif %}</div>
+  <div class="card-media{% if c.image %} has-image{% endif %}">
+    {%- if c.image %}<img src="{{ c.image | relative_url }}" alt="" loading="lazy">{% else %}{% include mini-chart.html type=chart %}{% endif -%}
+    {%- if include.sample %}<span class="badge">Sample</span>{% endif -%}
+  </div>
   <div class="card-body">
     <span class="kicker">{{ c.kicker }}</span>
     {%- if c.url and include.sample == nil %}
