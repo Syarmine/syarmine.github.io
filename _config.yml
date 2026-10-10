@@ -27,7 +27,7 @@ social:
 # Preview content. While true, sample cards (clearly badged "Sample") fill
 # the analysis and chart carousels until real posts and dashboards exist.
 # Set to false before publishing.
-show_samples: true
+show_samples: false
 
 # Google Analytics (GA4) measurement ID. Leave empty to disable.
 google_analytics: "G-YYY2YQEEPB"
