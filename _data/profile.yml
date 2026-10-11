@@ -13,6 +13,8 @@ facts:
     value: "bp · Kuala Lumpur"      # add your role, e.g. "Senior Analyst, bp"
   - label: "Education"
     value: "London School of Economics"
+  - label: "Certified"
+    value: "Microsoft PL-300, DP-600, DP-700"
   - label: "Disciplines"
     value: "Medicine, health economics, data, technology"
   - label: "Also"
