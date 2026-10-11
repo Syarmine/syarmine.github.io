@@ -2,12 +2,15 @@
 - group: "Languages"
   icon: code
   items: ["Python", "R", "SQL (T-SQL)", "DAX", "Power Query (M)", "LaTeX", "HTML / CSS / JSON"]
-- group: "BI and data platforms"
+- group: "Data platforms and BI"
   icon: chart
-  items: ["Power BI", "Microsoft Fabric", "Dataflows", "Tableau", "Flourish", "Excel"]
-- group: "Cloud and delivery"
+  items: ["Microsoft Fabric", "Databricks", "Power BI", "Tableau", "Flourish", "Excel"]
+- group: "Cloud and enterprise systems"
   icon: cloud
-  items: ["Microsoft Azure", "AWS", "Azure DevOps", "GitHub / Azure Repos", "Agile / Scrum", "FinOps"]
+  items: ["Microsoft Azure", "AWS", "SAP", "JDE", "Kinaxis", "SharePoint"]
+- group: "Delivery and governance"
+  icon: layers
+  items: ["PMP", "Agile / Scrum", "Azure DevOps", "GitHub / Azure Repos", "Data quality", "Risk (ISO 31010)", "FinOps"]
 - group: "Methods and domains"
   icon: pulse
-  items: ["Predictive modelling", "A/B experiments", "Data quality and governance", "Economic evaluation", "Energy", "Financial services", "Health insurance"]
+  items: ["Predictive modelling", "A/B experiments", "Generative AI", "Economic evaluation", "ESG and Scope 3", "Occupational health", "Health insurance"]

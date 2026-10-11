@@ -316,7 +316,7 @@ p { margin: 0; }
 /* ---------- Expertise ---------- */
 .skills { display: grid; gap: 16px; }
 @media (min-width: 640px) { .skills { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .skills { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .skills { grid-template-columns: repeat(6, 1fr); } .skill-group { grid-column: span 2; } .skill-group:nth-child(4), .skill-group:nth-child(5) { grid-column: span 3; } }
 .skill-group { padding: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
 .skill-head { display: flex; align-items: center; gap: 12px; }
 .skill-head h3 { font-size: 16px; font-weight: 700; }
@@ -398,6 +398,10 @@ p { margin: 0; }
 .cred-grid { grid-template-columns: 1fr; }
 @media (min-width: 900px) { .cred-grid { grid-template-columns: repeat(2, 1fr); } }
 .band-head p { max-width: 40rem; }
+.postnominals { margin-top: 10px; font-size: 14px; font-weight: 600; letter-spacing: .02em; color: var(--muted-foreground); }
+.cred-groups { display: grid; gap: 32px; }
+@media (min-width: 760px) { .cred-group .cred-list { grid-template-columns: repeat(2, 1fr); } }
+.cred-group-title { margin-bottom: 12px; font-size: 12px !important; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-foreground); }
 .two-col { display: grid; gap: 40px; }
 @media (min-width: 960px) { .two-col { grid-template-columns: 1fr 1fr; gap: 48px; } }
 .cred-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }

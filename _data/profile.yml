@@ -1,27 +1,31 @@
 # Top of the page: professional summary, at-a-glance facts and impact figures.
 headline: "Technical delivery lead · Data, AI, finance and health"
+postnominals: "MBBS · MSc (LSE, LSHTM) · PMP · MCT · FRSS"
 summary: >-
-  Leads the delivery of data and AI products for organisations where the stakes
-  are operational, financial and regulatory. Trained as a medical doctor, with
-  an MSc in Health Policy and Financing from the London School of Economics, and
-  now a Senior Data Analyst in bp's Data Analytics and AI team, running
-  cross-functional Agile delivery for analytics used across 700+ energy plants in
-  four regions. Earlier lead roles in national health insurance policy and
-  financial analytics, and a Fellow of the Royal Statistical Society.
+  Medical doctor turned data and AI delivery lead. In bp's Data Analytics and AI
+  team, delivers governed data platforms on Microsoft Fabric and Databricks for
+  supply chain, sustainability, and health and safety across six regions, and
+  runs cross-functional Agile delivery from requirements to production. Earlier
+  led analytics in national health insurance policy and financial services.
+  Works best where policy, technology and financing meet, and where the business
+  case for AI has to hold up with clinical, financial, regulatory and
+  engineering stakeholders at the same table.
 facts:
   - label: "Current"
-    value: "Senior Data Analyst, Data Analytics and AI, bp"
-  - label: "Previously"
-    value: "Lead Data Analyst, Kotak Sakti · Lead Policy Analyst, SOCSO"
+    value: "bp · Data Analytics and AI"
+  - label: "Founder"
+    value: "Digital Qasas"
+  - label: "Lead instructor"
+    value: "TYMBA Education · CA ANZ masterclass"
   - label: "Education"
-    value: "MSc, LSE · MBBCh, JUST"
-  - label: "Recognition"
-    value: "Fellow, Royal Statistical Society"
+    value: "MBBS, JUST · MSc, LSE and LSHTM"
+  - label: "Languages"
+    value: "Malay, Arabic, English, Mandarin"
 impact:
   - value: "50"
     label: "Production Power BI reports led at bp"
   - value: "700+"
-    label: "Energy plants monitored across 4 regions"
+    label: "Energy plants monitored across regions"
   - value: "95%"
     label: "On-time delivery, cross-functional team of 12"
   - value: "$2M"

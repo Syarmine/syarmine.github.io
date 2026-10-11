@@ -1,27 +1,94 @@
-# Projects and case studies (carousel + pop-up). Figures are from the CV.
+# Projects and case studies (carousel + pop-up). Figures are from the CV and
+# LinkedIn profile.
 # visual: line, bars, stacked, hbar, area, dots, arch, pipeline
-- id: bp-supply-demand
-  title: "Global supply and demand analytics"
+- id: bp-platform
+  title: "Unified AI and BI data platform"
   category: "bp · Data Analytics and AI"
-  stack: ["Power BI", "Dataflows", "Python", "Power Query"]
-  visual: bars
+  stack: ["Microsoft Fabric", "Databricks", "Dataflows", "Power BI"]
+  visual: arch
   tone: brand
-  summary: "Production reporting to monitor and forecast product demand and supply across four regions."
+  summary: "A governed semantic foundation on Fabric and Databricks so leaders self-serve and analysts stop firefighting reports."
   challenge: >-
-    Demand and supply of key products had to be monitored and forecast across
-    more than 700 energy plants in the EU, MENA, APAC and China, with reporting
-    that relied on manual refresh steps.
+    Capital and operating cost reporting was spread across many models, so
+    analysts spent their time maintaining reports instead of answering
+    questions, and leaders could not trust one version of the numbers.
   solution: >-
-    Led and built a suite of production Power BI reports on governed Dataflows,
-    with Python and Power Query handling transformation so refreshes run without
-    manual steps.
+    Defined how data is modelled, governed and consumed at scale on Microsoft
+    Fabric and Databricks, and built a trusted semantic layer with Dataflows,
+    Python and Power Query that removed manual refresh steps.
+  outcomes:
+    - value: "+20%"
+      label: "Reporting efficiency"
+    - value: "Self-serve"
+      label: "Decisions for business leadership"
+    - value: "CAPEX + OPEX"
+      label: "On one semantic layer"
+
+- id: bp-demand
+  title: "Global demand planning MI"
+  category: "bp · Castrol digitalisation"
+  stack: ["SAP", "JDE", "Kinaxis", "Power BI"]
+  visual: bars
+  tone: free
+  summary: "End-to-end integration across three planning systems for one supply chain view."
+  challenge: >-
+    Demand and supply data for key products sat in JDE, Kinaxis and SAP, so
+    planners across global markets worked from silos and forecasts lagged.
+  solution: >-
+    Architected cross-platform integration of the three systems into a unified
+    supply chain MI framework, and led the production Power BI reports used to
+    monitor and forecast demand and supply.
   outcomes:
     - value: "50"
       label: "Production reports"
     - value: "700+"
-      label: "Plants covered, 4 regions"
-    - value: "+20%"
-      label: "Reporting efficiency"
+      label: "Plants monitored"
+    - value: "3 → 1"
+      label: "Planning systems unified"
+
+- id: bp-sustainability
+  title: "Global sustainability MI"
+  category: "bp · ESG and Scope 3"
+  stack: ["Power BI", "Fabric", "Data governance"]
+  visual: stacked
+  tone: success
+  summary: "Consistent ESG and Scope 3 tracking across six regions for regulatory reporting."
+  challenge: >-
+    Sustainability metrics were tracked differently in each region, which made
+    cross-regional comparison and regulatory reporting slow and contested.
+  solution: >-
+    Architected and maintained global ESG and Scope 3 analytics on one set of
+    definitions across ASPAC, China, India, MEKSA, the US and the EU.
+  outcomes:
+    - value: "6"
+      label: "Regions on one definition"
+    - value: "Scope 3"
+      label: "Emissions coverage"
+    - value: "Regulatory"
+      label: "Reporting supported"
+
+- id: bp-health
+  title: "Health and wellbeing control tower"
+  category: "bp · HSE and occupational health"
+  stack: ["Power BI", "Data integration", "Occupational health"]
+  visual: line
+  tone: warning
+  summary: "One intelligence platform for workforce health data that used to be scattered by region."
+  challenge: >-
+    Occupational health and wellbeing data for the People, Culture and
+    Communications function was fragmented across regions, so risks surfaced
+    late and interventions were hard to target.
+  solution: >-
+    Designed and deployed a control tower that consolidates multi-regional
+    health data into a central platform, drawing on clinical and occupational
+    health expertise to define what to measure.
+  outcomes:
+    - value: "Multi-region"
+      label: "Health data consolidated"
+    - value: "Proactive"
+      label: "Workforce risk identification"
+    - value: "At scale"
+      label: "Evidence-based intervention"
 
 - id: bp-predictive
   title: "Experimentation and predictive models"
@@ -45,26 +112,27 @@
       label: "Business metrics defined"
 
 - id: bp-data-quality
-  title: "Automated data quality for regulatory compliance"
+  title: "Data quality and governance"
   category: "bp · Data governance"
   stack: ["Python", "SQL", "GitHub", "Azure Repos"]
   visual: pipeline
   tone: success
-  summary: "Automated checks and version-controlled pipelines that made regulatory review faster and reproducible."
+  summary: "Validation frameworks and automated checks that kept a large system migration loss-free and audit-ready."
   challenge: >-
-    Regulatory reviews of large datasets were slow and manual, and hard-coded
-    Python and SQL made analyses hard to reproduce for audit.
+    A large enterprise system migration put data integrity at risk, regulatory
+    reviews of large datasets were slow and manual, and hard-coded Python and SQL
+    made analyses hard to reproduce for audit.
   solution: >-
-    Automated data quality checks, moved processing into Power Query with code in
-    GitHub and Azure Repos, and documented methods and governance so audits can
-    trace every step.
+    Established validation and quality assurance frameworks for the migration,
+    automated data quality checks, moved code into GitHub and Azure Repos, and
+    documented methods and governance so audits can trace every step.
   outcomes:
     - value: "−70%"
       label: "Review time"
     - value: "99%"
       label: "Check accuracy on big data"
-    - value: "−20%"
-      label: "Technical debt"
+    - value: "Zero loss"
+      label: "Through system migration"
 
 - id: kotak-branches
   title: "Nationwide branch financial and risk analytics"
