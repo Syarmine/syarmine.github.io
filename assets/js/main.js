@@ -58,6 +58,56 @@
   }
   Array.prototype.forEach.call(document.querySelectorAll('.carousel[id]'), setupCarousel);
 
+  // ---- Case study pop-ups ----
+  // Cards open a <dialog>; Esc, the close button or a click on the backdrop
+  // closes it and returns focus to the card.
+  var opener = null;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-case-open]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var dlg = document.getElementById(btn.getAttribute('data-case-open'));
+      if (!dlg || typeof dlg.showModal !== 'function') return;
+      opener = btn;
+      dlg.showModal();
+      document.documentElement.style.overflow = 'hidden';
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('dialog.case'), function (dlg) {
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.closest('[data-case-close]')) dlg.close();
+    });
+    dlg.addEventListener('close', function () {
+      document.documentElement.style.overflow = '';
+      if (opener) opener.focus();
+    });
+  });
+
+  // ---- Career timeline ----
+  // The line fills as the timeline scrolls through the middle of the screen,
+  // and each role lights up once the line reaches it.
+  var timeline = document.querySelector('[data-timeline]');
+  if (timeline) {
+    var fill = timeline.querySelector('[data-timeline-fill]');
+    var tItems = timeline.querySelectorAll('[data-timeline-item]');
+    var tTicking = false;
+    var updateTimeline = function () {
+      tTicking = false;
+      var rect = timeline.getBoundingClientRect();
+      var anchor = window.innerHeight * 0.6;
+      var progress = Math.min(1, Math.max(0, (anchor - rect.top) / rect.height));
+      if (fill) fill.style.setProperty('--progress', (progress * 100).toFixed(1) + '%');
+      Array.prototype.forEach.call(tItems, function (item) {
+        var top = item.getBoundingClientRect().top + 22;
+        item.classList.toggle('is-reached', top <= anchor);
+      });
+    };
+    var scheduleTimeline = function () {
+      if (!tTicking) { tTicking = true; window.requestAnimationFrame(updateTimeline); }
+    };
+    window.addEventListener('scroll', scheduleTimeline, { passive: true });
+    window.addEventListener('resize', scheduleTimeline);
+    updateTimeline();
+  }
+
   // ---- Reveal on scroll ----
   // Reveal anything that has entered (or already passed) the viewport, so
   // fast jumps via anchor links never leave content hidden above the fold.

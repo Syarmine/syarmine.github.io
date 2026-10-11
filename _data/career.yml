@@ -1,0 +1,17 @@
+# Career timeline, newest first. Fill in the [bracketed] parts.
+- role: "[Your role]"
+  org: "bp"
+  period: "[Start year] – Present"
+  location: "Kuala Lumpur"
+  summary: "[One or two lines on scope and what you deliver.]"
+  current: true
+- role: "[Previous role]"
+  org: "[Organisation]"
+  period: "[Year] – [Year]"
+  location: ""
+  summary: "[One or two lines on scope and results.]"
+- role: "[Earlier role]"
+  org: "[Organisation]"
+  period: "[Year] – [Year]"
+  location: ""
+  summary: "[One or two lines on scope and results.]"

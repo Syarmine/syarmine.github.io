@@ -1,0 +1,21 @@
+# Top of the page: professional summary and quick facts.
+headline: "Multidisciplinary professional · Health, economics, data and technology"
+summary: >-
+  Works where medicine, health economics, data and technology meet, and across
+  the people who sit on each side of them. Trained in medicine, with a master's
+  from the London School of Economics, and now at bp in Kuala Lumpur. The common
+  thread is translation: turning clinical, financial and operational questions
+  into evidence, and evidence into decisions that different stakeholders can
+  agree on. Has trained more than 500 professionals in data skills and builds
+  Digital Qasas, a learning platform for working analysts.
+facts:
+  - label: "Current"
+    value: "bp · Kuala Lumpur"      # add your role, e.g. "Senior Analyst, bp"
+  - label: "Education"
+    value: "London School of Economics"
+  - label: "Certified"
+    value: "Microsoft PL-300, DP-600, DP-700"
+  - label: "Disciplines"
+    value: "Medicine, health economics, data, technology"
+  - label: "Also"
+    value: "Digital Qasas"

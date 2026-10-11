@@ -2,32 +2,31 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Economics, technology and institutions"
+tagline: "Health, economics, data and technology"
 description: >-
-  Essays and analysis on economics, technology, institutions and how
-  decisions get made.
+  Multidisciplinary professional working across medicine, health economics,
+  data and technology.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en
 
 # ------------------------------------------------------------------
-# Site owner, used in the footer, post bylines and the contact panel
+# Site owner
 # ------------------------------------------------------------------
 author:
   name: "Syarmine Shah"
-  # The primary contact button points here
-  contact_url: "https://www.linkedin.com/in/drsyarmine-shah/"
+
+# Where the "Writing" links point.
+writing_url: "https://app.digitalqasas.com/"
+
+# Public profile listing all Microsoft certifications.
+microsoft_learn_url: "https://learn.microsoft.com/en-us/users/syarmineshah-7151/credentials?tab=credentials-tab"
 
 # Social links. Remove a line to hide it.
 social:
   linkedin: "https://www.linkedin.com/in/drsyarmine-shah/"
   github: "https://github.com/Syarmine"
   twitter: "https://twitter.com/SyarmineS"
-
-# Sample content. While true, sample articles (posts with `sample: true`) and
-# sample chart cards are shown, each clearly badged "Sample". Set to false to
-# hide them everywhere once real content is in place.
-show_samples: true
 
 # Google Analytics (GA4) measurement ID. Leave empty to disable.
 google_analytics: "G-YYY2YQEEPB"
@@ -36,14 +35,7 @@ google_analytics: "G-YYY2YQEEPB"
 # Build settings
 # ------------------------------------------------------------------
 markdown: kramdown
-permalink: /blog/:year/:month/:title/
 
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
 
 exclude:
   - README.md
