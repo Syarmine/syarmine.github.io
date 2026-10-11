@@ -293,10 +293,30 @@ p { margin: 0; }
 @media (min-width: 640px) { .lead h1 { font-size: 64px; } }
 .lead-links .btn { height: 44px; padding: 0 20px; font-size: 14px; }
 
+/* ---------- Impact strip ---------- */
+.impact { border-bottom: 1px solid var(--border); background: var(--card); }
+.impact-grid { display: grid; grid-template-columns: repeat(2, 1fr); margin: 0; }
+@media (min-width: 760px) { .impact-grid { grid-template-columns: repeat(5, 1fr); } }
+.impact-grid > div { display: flex; flex-direction: column-reverse; gap: 6px; padding: 24px 16px 24px 0; border-top: 1px solid var(--border); }
+@media (min-width: 760px) { .impact-grid > div { padding: 32px 20px; border-top: 0; border-left: 1px solid var(--border); } .impact-grid > div:first-child { border-left: 0; padding-left: 0; } }
+.impact-grid > div:nth-child(-n+2) { border-top: 0; }
+.impact-grid dd { margin: 0; font-size: 32px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: var(--brand); font-variant-numeric: tabular-nums; }
+.impact-grid dt { font-size: 13px; line-height: 1.45; color: var(--muted-foreground); }
+
+/* ---------- Teaching ---------- */
+.teach-grid { display: grid; gap: 16px; }
+@media (min-width: 900px) { .teach-grid { grid-template-columns: repeat(3, 1fr); } }
+.teach { flex-direction: row; gap: 18px; padding: 22px; }
+.teach-num { display: flex; flex-direction: column; flex: none; width: 84px; }
+.teach-num strong { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: var(--brand); }
+.teach-num span { margin-top: 6px; font-size: 11.5px; line-height: 1.35; color: var(--muted-foreground); }
+.teach h3 { margin-top: 6px; font-size: 16px; font-weight: 700; line-height: 1.3; }
+.teach p { margin-top: 6px; font-size: 13.5px; line-height: 1.6; color: var(--muted-foreground); }
+
 /* ---------- Expertise ---------- */
 .skills { display: grid; gap: 16px; }
 @media (min-width: 640px) { .skills { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .skills { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .skills { grid-template-columns: repeat(6, 1fr); } .skill-group { grid-column: span 2; } .skill-group:nth-child(4), .skill-group:nth-child(5) { grid-column: span 3; } }
 .skill-group { padding: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
 .skill-head { display: flex; align-items: center; gap: 12px; }
 .skill-head h3 { font-size: 16px; font-weight: 700; }
@@ -375,6 +395,13 @@ p { margin: 0; }
 .timeline-summary { margin-top: 8px; font-size: 14px; line-height: 1.6; color: var(--muted-foreground); }
 
 /* ---------- Education and credentials ---------- */
+.cred-grid { grid-template-columns: 1fr; }
+@media (min-width: 900px) { .cred-grid { grid-template-columns: repeat(2, 1fr); } }
+.band-head p { max-width: 40rem; }
+.postnominals { margin-top: 10px; font-size: 14px; font-weight: 600; letter-spacing: .02em; color: var(--muted-foreground); }
+.cred-groups { display: grid; gap: 32px; }
+@media (min-width: 760px) { .cred-group .cred-list { grid-template-columns: repeat(2, 1fr); } }
+.cred-group-title { margin-bottom: 12px; font-size: 12px !important; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-foreground); }
 .two-col { display: grid; gap: 40px; }
 @media (min-width: 960px) { .two-col { grid-template-columns: 1fr 1fr; gap: 48px; } }
 .cred-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }

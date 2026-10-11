@@ -2,10 +2,10 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Health, economics, data and technology"
+tagline: "Technical delivery · Data, AI, finance and health"
 description: >-
-  Multidisciplinary professional working across medicine, health economics,
-  data and technology.
+  Technical delivery lead across data, AI, finance and health. Medical doctor,
+  LSE health economist and Senior Data Analyst at bp.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en

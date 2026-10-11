@@ -1,145 +1,201 @@
-# Projects and case studies (carousel + pop-up).
-# placeholder: true shows a small "figures are placeholders" note in the
-# pop-up. Replace the numbers with real ones and set it to false.
+# Projects and case studies (carousel + pop-up). Figures are from the CV and
+# LinkedIn profile.
 # visual: line, bars, stacked, hbar, area, dots, arch, pipeline
-- id: linkedin-skills
-  title: "LinkedIn Skills Assessment navigator"
-  category: "Business intelligence"
-  stack: ["Power BI", "Power Query", "DAX"]
-  visual: hbar
+- id: bp-platform
+  title: "Unified AI and BI data platform"
+  category: "bp · Data Analytics and AI"
+  stack: ["Microsoft Fabric", "Databricks", "Dataflows", "Power BI"]
+  visual: arch
   tone: brand
-  summary: "A Power BI report for choosing which LinkedIn skills assessments to take."
+  summary: "A governed semantic foundation on Fabric and Databricks so leaders self-serve and analysts stop firefighting reports."
   challenge: >-
-    LinkedIn offers dozens of skills assessments, each a short multiple-choice
-    test, but no easy way to compare them or plan which ones support a profile.
+    Capital and operating cost reporting was spread across many models, so
+    analysts spent their time maintaining reports instead of answering
+    questions, and leaders could not trust one version of the numbers.
   solution: >-
-    Built a Power BI report that catalogues the assessments so they can be
-    browsed and filtered in one place, and wrote up the approach on Medium.
+    Defined how data is modelled, governed and consumed at scale on Microsoft
+    Fabric and Databricks, and built a trusted semantic layer with Dataflows,
+    Python and Power Query that removed manual refresh steps.
   outcomes:
-    - value: "93"
-      label: "Assessments catalogued"
-    - value: "≈ 15"
-      label: "Questions per assessment"
-    - value: "1"
-      label: "Report to plan from"
-  link: "https://medium.com/@SyarmineS/improve-your-linkedin-profile-visibility-through-linkedin-skills-assessment-d7278379bea3"
-  placeholder: false
+    - value: "+20%"
+      label: "Reporting efficiency"
+    - value: "Self-serve"
+      label: "Decisions for business leadership"
+    - value: "CAPEX + OPEX"
+      label: "On one semantic layer"
 
-- id: exec-dashboard
-  title: "Executive performance dashboard"
-  category: "Business intelligence"
-  stack: ["Power BI", "Tableau", "SQL", "DAX"]
+- id: bp-demand
+  title: "Global demand planning MI"
+  category: "bp · Castrol digitalisation"
+  stack: ["SAP", "JDE", "Kinaxis", "Power BI"]
   visual: bars
-  tone: brand
-  summary: "One governed source for monthly performance reporting across business units."
-  challenge: >-
-    Monthly performance packs were assembled by hand from six spreadsheets and
-    two databases. Each cycle took a week, definitions differed between teams,
-    and leaders were reviewing numbers that were already out of date.
-  solution: >-
-    Built a star-schema model in SQL with agreed KPI definitions, a Power BI
-    semantic model with row-level security for each business unit, and a
-    Tableau view for the external board pack. Scheduled refresh replaced the
-    manual consolidation.
-  outcomes:
-    - value: "5 days → 4 hrs"
-      label: "Reporting cycle"
-    - value: "30"
-      label: "KPIs on one definition"
-    - value: "120+"
-      label: "Monthly active users"
-  placeholder: true
-
-- id: fabric-lakehouse
-  title: "Lakehouse BI on Microsoft Fabric"
-  category: "Data platform"
-  stack: ["Microsoft Fabric", "OneLake", "Dataflows Gen2", "Direct Lake"]
-  visual: stacked
   tone: free
-  summary: "Moved scattered reporting onto a single Fabric lakehouse with Direct Lake models."
+  summary: "End-to-end integration across three planning systems for one supply chain view."
   challenge: >-
-    Reports pulled from four source systems through separate import models.
-    Refreshes ran overnight, failed often, and every new report duplicated the
-    same transformation logic.
+    Demand and supply data for key products sat in JDE, Kinaxis and SAP, so
+    planners across global markets worked from silos and forecasts lagged.
   solution: >-
-    Landed sources into a Fabric lakehouse with Dataflows Gen2, standardised
-    bronze, silver and gold layers in OneLake, and rebuilt reporting on a shared
-    Direct Lake semantic model so reports read the gold tables directly.
+    Architected cross-platform integration of the three systems into a unified
+    supply chain MI framework, and led the production Power BI reports used to
+    monitor and forecast demand and supply.
   outcomes:
-    - value: "6 hrs → 15 min"
-      label: "Data refresh"
-    - value: "4 → 1"
-      label: "Sources unified"
-    - value: "−35%"
-      label: "Capacity cost"
-  placeholder: true
+    - value: "50"
+      label: "Production reports"
+    - value: "700+"
+      label: "Plants monitored"
+    - value: "3 → 1"
+      label: "Planning systems unified"
 
-- id: databricks-pipeline
-  title: "Databricks data pipeline"
-  category: "Data engineering"
-  stack: ["Databricks", "PySpark", "Delta Lake", "Workflows"]
-  visual: pipeline
-  tone: warning
-  summary: "Scheduled, tested PySpark pipeline replacing fragile notebook runs."
-  challenge: >-
-    Daily transaction data was processed in ad hoc notebooks run by hand. Jobs
-    were slow, failures went unnoticed, and there was no record of which version
-    of the data a report had used.
-  solution: >-
-    Rebuilt the process as a Databricks Workflow: incremental PySpark loads into
-    Delta tables, data quality checks at each layer, alerts on failure, and Delta
-    time travel for reproducible reporting.
-  outcomes:
-    - value: "50M"
-      label: "Rows processed daily"
-    - value: "−60%"
-      label: "Pipeline runtime"
-    - value: "98%"
-      label: "Quality checks passed"
-  placeholder: true
-
-- id: aws-ec2-site
-  title: "Web server on AWS EC2"
-  category: "Cloud infrastructure"
-  stack: ["AWS EC2", "Linux", "Nginx", "Let's Encrypt"]
-  visual: arch
+- id: bp-sustainability
+  title: "Global sustainability MI"
+  category: "bp · ESG and Scope 3"
+  stack: ["Power BI", "Fabric", "Data governance"]
+  visual: stacked
   tone: success
-  summary: "A small production website on a hardened Linux virtual machine."
+  summary: "Consistent ESG and Scope 3 tracking across six regions for regulatory reporting."
   challenge: >-
-    A project needed a simple, low-cost website with full control over the
-    server, HTTPS and a repeatable way to deploy updates.
+    Sustainability metrics were tracked differently in each region, which made
+    cross-regional comparison and regulatory reporting slow and contested.
   solution: >-
-    Provisioned an EC2 instance with a restricted security group and an Elastic
-    IP, configured Nginx as the web server with automatic TLS from Let's
-    Encrypt, and scripted deployment over SSH from the Git repository.
+    Architected and maintained global ESG and Scope 3 analytics on one set of
+    definitions across ASPAC, China, India, MEKSA, the US and the EU.
   outcomes:
-    - value: "99.9%"
-      label: "Uptime"
-    - value: "< 10 min"
-      label: "Deploy time"
-    - value: "≈ $8"
-      label: "Monthly hosting"
-  placeholder: true
+    - value: "6"
+      label: "Regions on one definition"
+    - value: "Scope 3"
+      label: "Emissions coverage"
+    - value: "Regulatory"
+      label: "Reporting supported"
 
-- id: azure-static-site
-  title: "Static site on Azure Static Web Apps"
-  category: "Cloud deployment"
-  stack: ["Azure Static Web Apps", "GitHub Actions", "Custom domain"]
-  visual: arch
-  tone: brand
-  summary: "Global, zero-server hosting with deployment on every push."
+- id: bp-health
+  title: "Health and wellbeing control tower"
+  category: "bp · HSE and occupational health"
+  stack: ["Power BI", "Data integration", "Occupational health"]
+  visual: line
+  tone: warning
+  summary: "One intelligence platform for workforce health data that used to be scattered by region."
   challenge: >-
-    A content site needed fast load times worldwide, HTTPS on a custom domain
-    and no servers to patch, on a minimal budget.
+    Occupational health and wellbeing data for the People, Culture and
+    Communications function was fragmented across regions, so risks surfaced
+    late and interventions were hard to target.
   solution: >-
-    Deployed to Azure Static Web Apps with a GitHub Actions workflow that builds
-    and publishes on every push, preview environments for pull requests, and a
-    custom domain with managed certificates.
+    Designed and deployed a control tower that consolidates multi-regional
+    health data into a central platform, drawing on clinical and occupational
+    health expertise to define what to measure.
   outcomes:
-    - value: "≈ 2 min"
-      label: "Push to live"
-    - value: "$0"
-      label: "Hosting (free tier)"
-    - value: "Global"
-      label: "CDN delivery"
-  placeholder: true
+    - value: "Multi-region"
+      label: "Health data consolidated"
+    - value: "Proactive"
+      label: "Workforce risk identification"
+    - value: "At scale"
+      label: "Evidence-based intervention"
+
+- id: bp-predictive
+  title: "Experimentation and predictive models"
+  category: "bp · Data Analytics and AI"
+  stack: ["Python", "Regression", "Classification", "A/B testing"]
+  visual: dots
+  tone: free
+  summary: "A/B experiments and predictive models that improved product performance and cut process waste."
+  challenge: >-
+    Product and process decisions needed evidence on what actually improved
+    customer outcomes, and early warning of where waste was building up.
+  solution: >-
+    Designed and deployed A/B experiments and built regression and classification
+    models in Python to predict performance and flag waste before it occurred.
+  outcomes:
+    - value: "+15%"
+      label: "Customer product performance"
+    - value: "$1M"
+      label: "Process waste prevented"
+    - value: "15+"
+      label: "Business metrics defined"
+
+- id: bp-data-quality
+  title: "Data quality and governance"
+  category: "bp · Data governance"
+  stack: ["Python", "SQL", "GitHub", "Azure Repos"]
+  visual: pipeline
+  tone: success
+  summary: "Validation frameworks and automated checks that kept a large system migration loss-free and audit-ready."
+  challenge: >-
+    A large enterprise system migration put data integrity at risk, regulatory
+    reviews of large datasets were slow and manual, and hard-coded Python and SQL
+    made analyses hard to reproduce for audit.
+  solution: >-
+    Established validation and quality assurance frameworks for the migration,
+    automated data quality checks, moved code into GitHub and Azure Repos, and
+    documented methods and governance so audits can trace every step.
+  outcomes:
+    - value: "−70%"
+      label: "Review time"
+    - value: "99%"
+      label: "Check accuracy on big data"
+    - value: "Zero loss"
+      label: "Through system migration"
+
+- id: kotak-branches
+  title: "Nationwide branch financial and risk analytics"
+  category: "Kotak Sakti · Lead Data Analyst"
+  stack: ["T-SQL", "Python", "Power BI", "Google Geocoding API"]
+  visual: arch
+  tone: warning
+  summary: "First firm-level and aggregate financial analysis across 700 branches, on a new star-schema warehouse."
+  challenge: >-
+    Financial and risk monitoring across 700 branches ran on legacy Excel models,
+    with no single source of truth and no view of where firms were located.
+  solution: >-
+    Designed a pipeline ingesting multiple sources into a star-schema warehouse in
+    T-SQL, replaced Excel models with Python, geocoded firm locations, and built
+    Power BI dashboards to the ISO 8000 data quality framework with a team of 15.
+  outcomes:
+    - value: "700"
+      label: "Branches analysed"
+    - value: "−30%"
+      label: "Time to production"
+    - value: "Near real time"
+      label: "Monitoring and reporting"
+
+- id: socso-screening
+  title: "Digital health screening programme"
+  category: "SOCSO · Lead Policy Analyst"
+  stack: ["Mobile app", "Programme delivery", "Change management"]
+  visual: line
+  tone: brand
+  summary: "Moved a paper voucher scheme to a mobile app, more than doubling uptake of health screening."
+  challenge: >-
+    Health screening vouchers were distributed physically, which limited reach
+    and made uptake hard to track.
+  solution: >-
+    Led a team of 12 to digitalise the scheme into a mobile application, from
+    requirements through rollout.
+  outcomes:
+    - value: "+150%"
+      label: "Screening, year on year"
+    - value: "12"
+      label: "Team led"
+    - value: "Paper → app"
+      label: "Distribution model"
+
+- id: socso-claims
+  title: "Health insurance claims and fraud analytics"
+  category: "SOCSO · Lead Policy Analyst"
+  stack: ["Python", "SQL Server", "SharePoint", "Power BI"]
+  visual: hbar
+  tone: free
+  summary: "Insurance analysis across firms, providers and beneficiaries that surfaced fraud and lifted provider performance."
+  challenge: >-
+    Claims data across firms, health providers and beneficiaries sat in separate
+    systems and Excel workbooks, so fraud and weak provider performance went
+    undetected.
+  solution: >-
+    Analysed the insurance market in Python, modernised ETL from SQL Server,
+    SharePoint and OneDrive into Power BI, and led the move from Excel for
+    executives and analysts.
+  outcomes:
+    - value: "$2M"
+      label: "Fraudulent claims identified"
+    - value: "+25%"
+      label: "Provider performance"
+    - value: "+70%"
+      label: "Analysis workflow"

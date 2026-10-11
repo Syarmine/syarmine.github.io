@@ -10,6 +10,7 @@ content:
     path: _data/profile.yml
     fields:
       - { name: headline, label: Headline, type: string }
+      - { name: postnominals, label: "Post-nominals (e.g. MBBS · MSc · PMP)", type: string }
       - { name: summary, label: Professional summary, type: text }
       - name: facts
         label: At a glance
@@ -18,6 +19,13 @@ content:
         fields:
           - { name: label, label: Label, type: string }
           - { name: value, label: Value, type: string }
+      - name: impact
+        label: Impact figures
+        type: object
+        list: true
+        fields:
+          - { name: value, label: "Figure (e.g. 700+)", type: string }
+          - { name: label, label: What it measures, type: string }
 
   - name: expertise
     label: Expertise
@@ -72,9 +80,20 @@ content:
       - { name: role, label: Role, type: string }
       - { name: org, label: Organisation, type: string }
       - { name: period, label: "Period (e.g. 2021 – Present)", type: string }
-      - { name: location, label: Location, type: string }
       - { name: summary, label: Summary, type: text }
       - { name: current, label: Current role, type: boolean }
+
+  - name: teaching
+    label: Teaching
+    type: file
+    path: _data/teaching.yml
+    list: true
+    fields:
+      - { name: org, label: Organisation, type: string }
+      - { name: title, label: Course or role, type: string }
+      - { name: detail, label: Detail, type: text }
+      - { name: value, label: "Headline figure", type: string }
+      - { name: label, label: Figure label, type: string }
 
   - name: education
     label: Education
@@ -92,8 +111,13 @@ content:
     path: _data/credentials.yml
     list: true
     fields:
-      - { name: name, label: Credential, type: string }
-      - { name: issuer, label: Issuer, type: string }
-      - { name: code, label: "Exam or ID (e.g. PL-300)", type: string }
-      - { name: year, label: Year, type: string }
-      - { name: url, label: Verification link, type: string }
+      - { name: group, label: Group, type: string }
+      - name: items
+        label: Credentials
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Credential, type: string }
+          - { name: issuer, label: "Issuer (and exam code)", type: string }
+          - { name: year, label: Year, type: string }
+          - { name: url, label: Verification link, type: string }
