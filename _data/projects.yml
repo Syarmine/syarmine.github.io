@@ -1,9 +1,9 @@
 # Projects and case studies (carousel + pop-up). Figures are from the CV and
 # LinkedIn profile.
 # visual: line, bars, stacked, hbar, area, dots, arch, pipeline
-- id: bp-platform
+- id: data-platform
   title: "Unified AI and BI data platform"
-  category: "bp · Data Analytics and AI"
+  category: "Energy · Data platform"
   stack: ["Microsoft Fabric", "Databricks", "Dataflows", "Power BI"]
   visual: arch
   tone: brand
@@ -24,9 +24,9 @@
     - value: "CAPEX + OPEX"
       label: "On one semantic layer"
 
-- id: bp-demand
+- id: demand-planning
   title: "Global demand planning MI"
-  category: "bp · Castrol digitalisation"
+  category: "Energy · Supply chain"
   stack: ["SAP", "JDE", "Kinaxis", "Power BI"]
   visual: bars
   tone: free
@@ -46,9 +46,9 @@
     - value: "3 → 1"
       label: "Planning systems unified"
 
-- id: bp-sustainability
+- id: sustainability
   title: "Global sustainability MI"
-  category: "bp · ESG and Scope 3"
+  category: "Energy · ESG and Scope 3"
   stack: ["Power BI", "Fabric", "Data governance"]
   visual: stacked
   tone: success
@@ -58,7 +58,7 @@
     cross-regional comparison and regulatory reporting slow and contested.
   solution: >-
     Architected and maintained global ESG and Scope 3 analytics on one set of
-    definitions across ASPAC, China, India, MEKSA, the US and the EU.
+    definitions across six regions in Asia, the Middle East, the Americas and Europe.
   outcomes:
     - value: "6"
       label: "Regions on one definition"
@@ -67,16 +67,16 @@
     - value: "Regulatory"
       label: "Reporting supported"
 
-- id: bp-health
+- id: health-control-tower
   title: "Health and wellbeing control tower"
-  category: "bp · HSE and occupational health"
+  category: "Occupational health"
   stack: ["Power BI", "Data integration", "Occupational health"]
   visual: line
   tone: warning
   summary: "One intelligence platform for workforce health data that used to be scattered by region."
   challenge: >-
-    Occupational health and wellbeing data for the People, Culture and
-    Communications function was fragmented across regions, so risks surfaced
+    Occupational health and wellbeing data for a global workforce was
+    fragmented across regions, so risks surfaced
     late and interventions were hard to target.
   solution: >-
     Designed and deployed a control tower that consolidates multi-regional
@@ -90,9 +90,9 @@
     - value: "At scale"
       label: "Evidence-based intervention"
 
-- id: bp-predictive
+- id: predictive-models
   title: "Experimentation and predictive models"
-  category: "bp · Data Analytics and AI"
+  category: "Energy · Advanced analytics"
   stack: ["Python", "Regression", "Classification", "A/B testing"]
   visual: dots
   tone: free
@@ -111,9 +111,9 @@
     - value: "15+"
       label: "Business metrics defined"
 
-- id: bp-data-quality
+- id: data-quality
   title: "Data quality and governance"
-  category: "bp · Data governance"
+  category: "Data governance"
   stack: ["Python", "SQL", "GitHub", "Azure Repos"]
   visual: pipeline
   tone: success
@@ -134,9 +134,9 @@
     - value: "Zero loss"
       label: "Through system migration"
 
-- id: kotak-branches
+- id: branch-risk
   title: "Nationwide branch financial and risk analytics"
-  category: "Kotak Sakti · Lead Data Analyst"
+  category: "Financial services · Risk analytics"
   stack: ["T-SQL", "Python", "Power BI", "Google Geocoding API"]
   visual: arch
   tone: warning
@@ -156,9 +156,9 @@
     - value: "Near real time"
       label: "Monitoring and reporting"
 
-- id: socso-screening
+- id: digital-screening
   title: "Digital health screening programme"
-  category: "SOCSO · Lead Policy Analyst"
+  category: "Public health · Digital programme"
   stack: ["Mobile app", "Programme delivery", "Change management"]
   visual: line
   tone: brand
@@ -177,9 +177,9 @@
     - value: "Paper → app"
       label: "Distribution model"
 
-- id: socso-claims
+- id: claims-fraud
   title: "Health insurance claims and fraud analytics"
-  category: "SOCSO · Lead Policy Analyst"
+  category: "Health insurance · Fraud analytics"
   stack: ["Python", "SQL Server", "SharePoint", "Power BI"]
   visual: hbar
   tone: free
