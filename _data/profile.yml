@@ -1,34 +1,34 @@
 # Top of the page: professional summary, at-a-glance facts and impact figures.
-headline: "Technical delivery lead · Data, AI, finance and health"
+headline: "Technical delivery lead · Enterprise data and AI"
 postnominals: "MBBS · MSc (LSE, LSHTM) · PMP · MCT · FRSS"
 summary: >-
-  Medical doctor turned data and AI delivery lead. In bp's Data Analytics and AI
-  team, delivers governed data platforms on Microsoft Fabric and Databricks for
-  supply chain, sustainability, and health and safety across six regions, and
-  runs cross-functional Agile delivery from requirements to production. Earlier
-  led analytics in national health insurance policy and financial services.
-  Works best where policy, technology and financing meet, and where the business
-  case for AI has to hold up with clinical, financial, regulatory and
-  engineering stakeholders at the same table.
+  Takes enterprise data and AI products from business case to production.
+  Delivers governed lakehouse platforms on Microsoft Fabric and Databricks,
+  semantic models, predictive analytics and generative AI use cases for supply
+  chain, sustainability (ESG and Scope 3), and health and safety across six
+  regions. Runs cross-functional Agile delivery with engineering, finance,
+  regulatory and clinical stakeholders, and builds the AI business case that
+  gets programmes funded. Medical doctor and health economist by training, PMP
+  and Microsoft Certified Trainer.
 facts:
-  - label: "Current"
-    value: "bp · Data Analytics and AI"
+  - label: "Focus"
+    value: "Enterprise data and AI delivery"
+  - label: "Sectors"
+    value: "Energy, financial services, health"
   - label: "Founder"
     value: "Digital Qasas"
-  - label: "Lead instructor"
-    value: "TYMBA Education · CA ANZ masterclass"
   - label: "Education"
     value: "MBBS, JUST · MSc, LSE and LSHTM"
   - label: "Languages"
     value: "Malay, Arabic, English, Mandarin"
 impact:
-  - value: "50"
-    label: "Production Power BI reports led at bp"
-  - value: "700+"
-    label: "Energy plants monitored across regions"
-  - value: "95%"
-    label: "On-time delivery, cross-functional team of 12"
+  - value: "$1M"
+    label: "Process waste prevented with predictive models"
   - value: "$2M"
     label: "Fraudulent insurance claims identified"
-  - value: "600+"
-    label: "Professionals and students taught"
+  - value: "−70%"
+    label: "Regulatory review time with automated data quality"
+  - value: "+150%"
+    label: "Health screening uptake after digital rollout"
+  - value: "95%"
+    label: "On-time delivery across cross-functional teams"
