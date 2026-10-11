@@ -1,18 +1,19 @@
 # Top of the page: professional summary and quick facts.
-headline: "Analytics engineer · Health economics background"
+headline: "Multidisciplinary professional · Health, economics, data and technology"
 summary: >-
-  Analytics engineer who builds data models, pipelines and reporting in SQL,
-  Python, R, Power BI and Microsoft Fabric, currently at bp in Kuala Lumpur.
-  Comes to data from medicine and health economics, with a master's from the
-  London School of Economics, so the work starts from the decision a number has
-  to support. Has trained more than 500 professionals in SQL, Power BI and
-  Tableau, and writes about Power BI and Fabric on Medium.
+  Works where medicine, health economics, data and technology meet, and across
+  the people who sit on each side of them. Trained in medicine, with a master's
+  from the London School of Economics, and now at bp in Kuala Lumpur. The common
+  thread is translation: turning clinical, financial and operational questions
+  into evidence, and evidence into decisions that different stakeholders can
+  agree on. Has trained more than 500 professionals in data skills and builds
+  Digital Qasas, a learning platform for working analysts.
 facts:
   - label: "Current"
     value: "bp · Kuala Lumpur"      # add your role, e.g. "Senior Analyst, bp"
   - label: "Education"
     value: "London School of Economics"
-  - label: "Certified"
-    value: "Microsoft PL-300 · Google Advanced Data Analytics"
-  - label: "Focus"
-    value: "Power BI, Microsoft Fabric, Python, R"
+  - label: "Disciplines"
+    value: "Medicine, health economics, data, technology"
+  - label: "Also"
+    value: "Digital Qasas"

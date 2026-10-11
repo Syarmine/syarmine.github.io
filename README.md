@@ -15,8 +15,7 @@ All content lives in small data files, so there is no HTML to touch.
 | Career timeline | `_data/career.yml` |
 | Education | `_data/education.yml` |
 | Verified credentials | `_data/credentials.yml` |
-| Writing and publications | `_data/writing.yml` |
-| Name, links, analytics | `_config.yml` |
+| Name, links, writing link, analytics | `_config.yml` |
 
 **Easiest way:** sign in at <https://app.pagescms.org> with GitHub, open
 `Syarmine/syarmine.github.io` on the `gh-pages` branch and edit each section as a form. The forms

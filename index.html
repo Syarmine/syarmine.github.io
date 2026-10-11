@@ -185,20 +185,13 @@ layout: default
 <!-- ============ WRITING ============ -->
 <section id="writing" class="band band-last" aria-labelledby="writing-title">
   <div class="container">
-    <div class="band-head"><div><span class="kicker">Writing and publications</span><h2 id="writing-title">Writing</h2></div></div>
-    <ul class="cred-list writing-list">
-      {%- for w in site.data.writing %}
-      <li>
-        <a class="cred" href="{{ w.url }}" target="_blank" rel="noopener">
-          <span class="cred-icon" aria-hidden="true">{% include icon.html name="pen" %}</span>
-          <div>
-            <h3>{{ w.title }}</h3>
-            <p>{{ w.venue }}</p>
-          </div>
-          <span class="cred-year">{{ w.year }} {% include icon.html name="external" %}</span>
-        </a>
-      </li>
-      {%- endfor %}
-    </ul>
+    <a class="card is-link writing-cta" href="{{ site.writing_url }}" target="_blank" rel="noopener">
+      <div>
+        <span class="kicker">Writing and courses</span>
+        <h2 id="writing-title">Read and learn on Digital Qasas</h2>
+        <p>Guides, courses and notes on data, analytics and decision-making.</p>
+      </div>
+      <span class="btn btn-brand">Visit Digital Qasas {% include icon.html name="external" %}</span>
+    </a>
   </div>
 </section>

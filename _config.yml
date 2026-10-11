@@ -2,10 +2,10 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Analytics engineering"
+tagline: "Health, economics, data and technology"
 description: >-
-  Analytics engineer working in SQL, Python, R, Power BI and Microsoft Fabric,
-  with a background in medicine and health economics.
+  Multidisciplinary professional working across medicine, health economics,
+  data and technology.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en
@@ -15,6 +15,9 @@ lang: en
 # ------------------------------------------------------------------
 author:
   name: "Syarmine Shah"
+
+# Where the "Writing" links point.
+writing_url: "https://app.digitalqasas.com/"
 
 # Social links. Remove a line to hide it.
 social:

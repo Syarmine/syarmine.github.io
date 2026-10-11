@@ -342,10 +342,11 @@ p { margin: 0; }
 .outcomes dd { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; color: var(--tone, var(--brand)); font-variant-numeric: tabular-nums; }
 .outcomes dt { font-size: 12.5px; color: var(--muted-foreground); }
 .case-link { margin-top: 14px; }
-.writing-list li { list-style: none; }
-.writing-list .cred { color: inherit; }
-.writing-list .cred:hover h3 { color: var(--brand); }
-.writing-list .cred-year { display: inline-flex; align-items: center; gap: 6px; }
+.writing-cta { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding: 32px; color: inherit; }
+.writing-cta:hover { color: inherit; }
+.writing-cta h2 { margin-top: 6px; font-size: 24px; font-weight: 800; letter-spacing: -0.025em; }
+.writing-cta p { margin-top: 8px; font-size: 14px; color: var(--muted-foreground); }
+.writing-cta .btn { height: 44px; padding: 0 20px; font-size: 14px; }
 .case-note { margin-top: 6px !important; font-size: 12px !important; color: var(--muted-foreground); }
 
 /* ---------- Career timeline ---------- */
