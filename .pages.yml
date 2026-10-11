@@ -121,3 +121,4 @@ content:
           - { name: issuer, label: "Issuer (and exam code)", type: string }
           - { name: year, label: Year, type: string }
           - { name: url, label: Verification link, type: string }
+          - { name: featured, label: "Show without expanding", type: boolean }

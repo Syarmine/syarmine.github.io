@@ -36,15 +36,15 @@
     planners across global markets worked from silos and forecasts lagged.
   solution: >-
     Architected cross-platform integration of the three systems into a unified
-    supply chain MI framework, and led the production Power BI reports used to
-    monitor and forecast demand and supply.
+    supply chain MI framework that planners use to monitor and forecast demand
+    and supply.
   outcomes:
-    - value: "50"
-      label: "Production reports"
-    - value: "700+"
-      label: "Plants monitored"
     - value: "3 → 1"
       label: "Planning systems unified"
+    - value: "700+"
+      label: "Plants in one view"
+    - value: "Faster"
+      label: "Forecast accuracy and decisions"
 
 - id: sustainability
   title: "Global sustainability MI"

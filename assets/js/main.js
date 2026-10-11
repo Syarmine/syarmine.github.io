@@ -105,6 +105,16 @@
     };
     window.addEventListener('scroll', scheduleTimeline, { passive: true });
     window.addEventListener('resize', scheduleTimeline);
+    // Expanding a role or showing earlier roles changes the timeline's height.
+    timeline.addEventListener('toggle', scheduleTimeline, true);
+    var moreBtn = timeline.querySelector('[data-timeline-toggle]');
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function () {
+        var open = timeline.classList.toggle('show-all');
+        moreBtn.setAttribute('aria-expanded', String(open));
+        scheduleTimeline();
+      });
+    }
     updateTimeline();
   }
 
