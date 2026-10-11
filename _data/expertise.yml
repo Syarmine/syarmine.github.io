@@ -13,4 +13,4 @@
   items: ["PMP", "Agile / Scrum", "Azure DevOps", "GitHub / Azure Repos", "Data quality", "Risk (ISO 31010)", "FinOps"]
 - group: "Methods and domains"
   icon: pulse
-  items: ["Predictive modelling", "A/B experiments", "Generative AI", "Economic evaluation", "ESG and Scope 3", "Occupational health", "Health insurance"]
+  items: ["Predictive modelling", "A/B experiments", "Generative AI", "Agentic AI", "LLM apps and RAG", "AI governance", "Economic evaluation", "ESG and Scope 3", "Occupational health", "Health insurance"]

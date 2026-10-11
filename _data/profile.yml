@@ -1,18 +1,21 @@
 # Top of the page: professional summary, at-a-glance facts and impact figures.
-headline: "Technical delivery lead · Enterprise data and AI"
+headline: "Technical delivery lead · Enterprise data, generative and agentic AI"
 postnominals: "MBBS · MSc (LSE, LSHTM) · PMP · MCT · FRSS"
 summary: >-
-  Takes enterprise data and AI products from business case to production.
-  Delivers governed lakehouse platforms on Microsoft Fabric and Databricks,
-  semantic models, predictive analytics and generative AI use cases for supply
-  chain, sustainability (ESG and Scope 3), and health and safety across six
-  regions. Runs cross-functional Agile delivery with engineering, finance,
-  regulatory and clinical stakeholders, and builds the AI business case that
-  gets programmes funded. Medical doctor and health economist by training, PMP
+  Takes enterprise data and AI products from business case to production,
+  including generative and agentic AI. Designs AI agents, copilots and
+  LLM-based workflows that run on governed lakehouse data in Microsoft Fabric
+  and Databricks, with retrieval (RAG), evaluation and human-in-the-loop
+  controls built in. Delivers semantic models, machine learning and
+  predictive analytics for supply chain, sustainability (ESG and Scope 3), and
+  health and safety across six regions. Leads cross-functional Agile delivery
+  with engineering, finance, regulatory and clinical stakeholders, and builds
+  the AI business case, risk assessment and governance that get programmes
+  funded and approved. Medical doctor and health economist by training, PMP
   and Microsoft Certified Trainer.
 facts:
   - label: "Focus"
-    value: "Enterprise data and AI delivery"
+    value: "Enterprise data, generative and agentic AI"
   - label: "Sectors"
     value: "Energy, financial services, health"
   - label: "Founder"
