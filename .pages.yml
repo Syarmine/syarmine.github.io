@@ -18,6 +18,13 @@ content:
         fields:
           - { name: label, label: Label, type: string }
           - { name: value, label: Value, type: string }
+      - name: impact
+        label: Impact figures
+        type: object
+        list: true
+        fields:
+          - { name: value, label: "Figure (e.g. 700+)", type: string }
+          - { name: label, label: What it measures, type: string }
 
   - name: expertise
     label: Expertise
@@ -75,6 +82,18 @@ content:
       - { name: location, label: Location, type: string }
       - { name: summary, label: Summary, type: text }
       - { name: current, label: Current role, type: boolean }
+
+  - name: teaching
+    label: Teaching
+    type: file
+    path: _data/teaching.yml
+    list: true
+    fields:
+      - { name: org, label: Organisation, type: string }
+      - { name: title, label: Course or role, type: string }
+      - { name: detail, label: Detail, type: text }
+      - { name: value, label: "Headline figure", type: string }
+      - { name: label, label: Figure label, type: string }
 
   - name: education
     label: Education

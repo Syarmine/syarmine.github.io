@@ -1,13 +1,13 @@
 # Technical expertise, grouped. icon: a name from _includes/icon.html.
 - group: "Languages"
   icon: code
-  items: ["SQL", "Python", "R", "DAX", "Power Query (M)"]
-- group: "Business intelligence"
+  items: ["Python", "R", "SQL (T-SQL)", "DAX", "Power Query (M)", "LaTeX", "HTML / CSS / JSON"]
+- group: "BI and data platforms"
   icon: chart
-  items: ["Power BI", "Microsoft Fabric", "Tableau", "Flourish", "Excel"]
-- group: "Data engineering and cloud"
+  items: ["Power BI", "Microsoft Fabric", "Dataflows", "Tableau", "Flourish", "Excel"]
+- group: "Cloud and delivery"
   icon: cloud
-  items: ["Lakehouse design", "Databricks", "Microsoft Azure", "AWS", "GitHub Actions"]
-- group: "Domain"
+  items: ["Microsoft Azure", "AWS", "Azure DevOps", "GitHub / Azure Repos", "Agile / Scrum", "FinOps"]
+- group: "Methods and domains"
   icon: pulse
-  items: ["Health economics", "Health financing", "Clinical research (GCP)", "Insurance and takaful"]
+  items: ["Predictive modelling", "A/B experiments", "Data quality and governance", "Economic evaluation", "Energy", "Financial services", "Health insurance"]

@@ -1,145 +1,133 @@
-# Projects and case studies (carousel + pop-up).
-# placeholder: true shows a small "figures are placeholders" note in the
-# pop-up. Replace the numbers with real ones and set it to false.
+# Projects and case studies (carousel + pop-up). Figures are from the CV.
 # visual: line, bars, stacked, hbar, area, dots, arch, pipeline
-- id: linkedin-skills
-  title: "LinkedIn Skills Assessment navigator"
-  category: "Business intelligence"
-  stack: ["Power BI", "Power Query", "DAX"]
-  visual: hbar
-  tone: brand
-  summary: "A Power BI report for choosing which LinkedIn skills assessments to take."
-  challenge: >-
-    LinkedIn offers dozens of skills assessments, each a short multiple-choice
-    test, but no easy way to compare them or plan which ones support a profile.
-  solution: >-
-    Built a Power BI report that catalogues the assessments so they can be
-    browsed and filtered in one place, and wrote up the approach on Medium.
-  outcomes:
-    - value: "93"
-      label: "Assessments catalogued"
-    - value: "≈ 15"
-      label: "Questions per assessment"
-    - value: "1"
-      label: "Report to plan from"
-  link: "https://medium.com/@SyarmineS/improve-your-linkedin-profile-visibility-through-linkedin-skills-assessment-d7278379bea3"
-  placeholder: false
-
-- id: exec-dashboard
-  title: "Executive performance dashboard"
-  category: "Business intelligence"
-  stack: ["Power BI", "Tableau", "SQL", "DAX"]
+- id: bp-supply-demand
+  title: "Global supply and demand analytics"
+  category: "bp · Data Analytics and AI"
+  stack: ["Power BI", "Dataflows", "Python", "Power Query"]
   visual: bars
   tone: brand
-  summary: "One governed source for monthly performance reporting across business units."
+  summary: "Production reporting to monitor and forecast product demand and supply across four regions."
   challenge: >-
-    Monthly performance packs were assembled by hand from six spreadsheets and
-    two databases. Each cycle took a week, definitions differed between teams,
-    and leaders were reviewing numbers that were already out of date.
+    Demand and supply of key products had to be monitored and forecast across
+    more than 700 energy plants in the EU, MENA, APAC and China, with reporting
+    that relied on manual refresh steps.
   solution: >-
-    Built a star-schema model in SQL with agreed KPI definitions, a Power BI
-    semantic model with row-level security for each business unit, and a
-    Tableau view for the external board pack. Scheduled refresh replaced the
-    manual consolidation.
+    Led and built a suite of production Power BI reports on governed Dataflows,
+    with Python and Power Query handling transformation so refreshes run without
+    manual steps.
   outcomes:
-    - value: "5 days → 4 hrs"
-      label: "Reporting cycle"
-    - value: "30"
-      label: "KPIs on one definition"
-    - value: "120+"
-      label: "Monthly active users"
-  placeholder: true
+    - value: "50"
+      label: "Production reports"
+    - value: "700+"
+      label: "Plants covered, 4 regions"
+    - value: "+20%"
+      label: "Reporting efficiency"
 
-- id: fabric-lakehouse
-  title: "Lakehouse BI on Microsoft Fabric"
-  category: "Data platform"
-  stack: ["Microsoft Fabric", "OneLake", "Dataflows Gen2", "Direct Lake"]
-  visual: stacked
+- id: bp-predictive
+  title: "Experimentation and predictive models"
+  category: "bp · Data Analytics and AI"
+  stack: ["Python", "Regression", "Classification", "A/B testing"]
+  visual: dots
   tone: free
-  summary: "Moved scattered reporting onto a single Fabric lakehouse with Direct Lake models."
+  summary: "A/B experiments and predictive models that improved product performance and cut process waste."
   challenge: >-
-    Reports pulled from four source systems through separate import models.
-    Refreshes ran overnight, failed often, and every new report duplicated the
-    same transformation logic.
+    Product and process decisions needed evidence on what actually improved
+    customer outcomes, and early warning of where waste was building up.
   solution: >-
-    Landed sources into a Fabric lakehouse with Dataflows Gen2, standardised
-    bronze, silver and gold layers in OneLake, and rebuilt reporting on a shared
-    Direct Lake semantic model so reports read the gold tables directly.
+    Designed and deployed A/B experiments and built regression and classification
+    models in Python to predict performance and flag waste before it occurred.
   outcomes:
-    - value: "6 hrs → 15 min"
-      label: "Data refresh"
-    - value: "4 → 1"
-      label: "Sources unified"
-    - value: "−35%"
-      label: "Capacity cost"
-  placeholder: true
+    - value: "+15%"
+      label: "Customer product performance"
+    - value: "$1M"
+      label: "Process waste prevented"
+    - value: "15+"
+      label: "Business metrics defined"
 
-- id: databricks-pipeline
-  title: "Databricks data pipeline"
-  category: "Data engineering"
-  stack: ["Databricks", "PySpark", "Delta Lake", "Workflows"]
+- id: bp-data-quality
+  title: "Automated data quality for regulatory compliance"
+  category: "bp · Data governance"
+  stack: ["Python", "SQL", "GitHub", "Azure Repos"]
   visual: pipeline
-  tone: warning
-  summary: "Scheduled, tested PySpark pipeline replacing fragile notebook runs."
-  challenge: >-
-    Daily transaction data was processed in ad hoc notebooks run by hand. Jobs
-    were slow, failures went unnoticed, and there was no record of which version
-    of the data a report had used.
-  solution: >-
-    Rebuilt the process as a Databricks Workflow: incremental PySpark loads into
-    Delta tables, data quality checks at each layer, alerts on failure, and Delta
-    time travel for reproducible reporting.
-  outcomes:
-    - value: "50M"
-      label: "Rows processed daily"
-    - value: "−60%"
-      label: "Pipeline runtime"
-    - value: "98%"
-      label: "Quality checks passed"
-  placeholder: true
-
-- id: aws-ec2-site
-  title: "Web server on AWS EC2"
-  category: "Cloud infrastructure"
-  stack: ["AWS EC2", "Linux", "Nginx", "Let's Encrypt"]
-  visual: arch
   tone: success
-  summary: "A small production website on a hardened Linux virtual machine."
+  summary: "Automated checks and version-controlled pipelines that made regulatory review faster and reproducible."
   challenge: >-
-    A project needed a simple, low-cost website with full control over the
-    server, HTTPS and a repeatable way to deploy updates.
+    Regulatory reviews of large datasets were slow and manual, and hard-coded
+    Python and SQL made analyses hard to reproduce for audit.
   solution: >-
-    Provisioned an EC2 instance with a restricted security group and an Elastic
-    IP, configured Nginx as the web server with automatic TLS from Let's
-    Encrypt, and scripted deployment over SSH from the Git repository.
+    Automated data quality checks, moved processing into Power Query with code in
+    GitHub and Azure Repos, and documented methods and governance so audits can
+    trace every step.
   outcomes:
-    - value: "99.9%"
-      label: "Uptime"
-    - value: "< 10 min"
-      label: "Deploy time"
-    - value: "≈ $8"
-      label: "Monthly hosting"
-  placeholder: true
+    - value: "−70%"
+      label: "Review time"
+    - value: "99%"
+      label: "Check accuracy on big data"
+    - value: "−20%"
+      label: "Technical debt"
 
-- id: azure-static-site
-  title: "Static site on Azure Static Web Apps"
-  category: "Cloud deployment"
-  stack: ["Azure Static Web Apps", "GitHub Actions", "Custom domain"]
+- id: kotak-branches
+  title: "Nationwide branch financial and risk analytics"
+  category: "Kotak Sakti · Lead Data Analyst"
+  stack: ["T-SQL", "Python", "Power BI", "Google Geocoding API"]
   visual: arch
-  tone: brand
-  summary: "Global, zero-server hosting with deployment on every push."
+  tone: warning
+  summary: "First firm-level and aggregate financial analysis across 700 branches, on a new star-schema warehouse."
   challenge: >-
-    A content site needed fast load times worldwide, HTTPS on a custom domain
-    and no servers to patch, on a minimal budget.
+    Financial and risk monitoring across 700 branches ran on legacy Excel models,
+    with no single source of truth and no view of where firms were located.
   solution: >-
-    Deployed to Azure Static Web Apps with a GitHub Actions workflow that builds
-    and publishes on every push, preview environments for pull requests, and a
-    custom domain with managed certificates.
+    Designed a pipeline ingesting multiple sources into a star-schema warehouse in
+    T-SQL, replaced Excel models with Python, geocoded firm locations, and built
+    Power BI dashboards to the ISO 8000 data quality framework with a team of 15.
   outcomes:
-    - value: "≈ 2 min"
-      label: "Push to live"
-    - value: "$0"
-      label: "Hosting (free tier)"
-    - value: "Global"
-      label: "CDN delivery"
-  placeholder: true
+    - value: "700"
+      label: "Branches analysed"
+    - value: "−30%"
+      label: "Time to production"
+    - value: "Near real time"
+      label: "Monitoring and reporting"
+
+- id: socso-screening
+  title: "Digital health screening programme"
+  category: "SOCSO · Lead Policy Analyst"
+  stack: ["Mobile app", "Programme delivery", "Change management"]
+  visual: line
+  tone: brand
+  summary: "Moved a paper voucher scheme to a mobile app, more than doubling uptake of health screening."
+  challenge: >-
+    Health screening vouchers were distributed physically, which limited reach
+    and made uptake hard to track.
+  solution: >-
+    Led a team of 12 to digitalise the scheme into a mobile application, from
+    requirements through rollout.
+  outcomes:
+    - value: "+150%"
+      label: "Screening, year on year"
+    - value: "12"
+      label: "Team led"
+    - value: "Paper → app"
+      label: "Distribution model"
+
+- id: socso-claims
+  title: "Health insurance claims and fraud analytics"
+  category: "SOCSO · Lead Policy Analyst"
+  stack: ["Python", "SQL Server", "SharePoint", "Power BI"]
+  visual: hbar
+  tone: free
+  summary: "Insurance analysis across firms, providers and beneficiaries that surfaced fraud and lifted provider performance."
+  challenge: >-
+    Claims data across firms, health providers and beneficiaries sat in separate
+    systems and Excel workbooks, so fraud and weak provider performance went
+    undetected.
+  solution: >-
+    Analysed the insurance market in Python, modernised ETL from SQL Server,
+    SharePoint and OneDrive into Power BI, and led the move from Excel for
+    executives and analysts.
+  outcomes:
+    - value: "$2M"
+      label: "Fraudulent claims identified"
+    - value: "+25%"
+      label: "Provider performance"
+    - value: "+70%"
+      label: "Analysis workflow"

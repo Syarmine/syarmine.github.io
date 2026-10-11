@@ -1,21 +1,30 @@
-# Top of the page: professional summary and quick facts.
-headline: "Multidisciplinary professional · Health, economics, data and technology"
+# Top of the page: professional summary, at-a-glance facts and impact figures.
+headline: "Technical delivery lead · Data, AI, finance and health"
 summary: >-
-  Works where medicine, health economics, data and technology meet, and across
-  the people who sit on each side of them. Trained in medicine, with a master's
-  from the London School of Economics, and now at bp in Kuala Lumpur. The common
-  thread is translation: turning clinical, financial and operational questions
-  into evidence, and evidence into decisions that different stakeholders can
-  agree on. Has trained more than 500 professionals in data skills and builds
-  Digital Qasas, a learning platform for working analysts.
+  Leads the delivery of data and AI products for organisations where the stakes
+  are operational, financial and regulatory. Trained as a medical doctor, with
+  an MSc in Health Policy and Financing from the London School of Economics, and
+  now a Senior Data Analyst in bp's Data Analytics and AI team, running
+  cross-functional Agile delivery for analytics used across 700+ energy plants in
+  four regions. Earlier lead roles in national health insurance policy and
+  financial analytics, and a Fellow of the Royal Statistical Society.
 facts:
   - label: "Current"
-    value: "bp · Kuala Lumpur"      # add your role, e.g. "Senior Analyst, bp"
+    value: "Senior Data Analyst, Data Analytics and AI, bp"
+  - label: "Previously"
+    value: "Lead Data Analyst, Kotak Sakti · Lead Policy Analyst, SOCSO"
   - label: "Education"
-    value: "London School of Economics"
-  - label: "Certified"
-    value: "Microsoft PL-300, DP-600, DP-700"
-  - label: "Disciplines"
-    value: "Medicine, health economics, data, technology"
-  - label: "Also"
-    value: "Digital Qasas"
+    value: "MSc, LSE · MBBCh, JUST"
+  - label: "Recognition"
+    value: "Fellow, Royal Statistical Society"
+impact:
+  - value: "50"
+    label: "Production Power BI reports led at bp"
+  - value: "700+"
+    label: "Energy plants monitored across 4 regions"
+  - value: "95%"
+    label: "On-time delivery, cross-functional team of 12"
+  - value: "$2M"
+    label: "Fraudulent insurance claims identified"
+  - value: "600+"
+    label: "Professionals and students taught"

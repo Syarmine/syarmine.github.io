@@ -9,10 +9,11 @@ All content lives in small data files, so there is no HTML to touch.
 
 | Section | File |
 | --- | --- |
-| Summary and "At a glance" | `_data/profile.yml` |
+| Summary, "At a glance" and impact figures | `_data/profile.yml` |
 | Technical expertise | `_data/expertise.yml` |
 | Projects and case studies (carousel and pop-ups) | `_data/projects.yml` |
 | Career timeline | `_data/career.yml` |
+| Teaching and leadership | `_data/teaching.yml` |
 | Education | `_data/education.yml` |
 | Verified credentials | `_data/credentials.yml` |
 | Name, links, writing link, analytics | `_config.yml` |
@@ -21,15 +22,11 @@ All content lives in small data files, so there is no HTML to touch.
 `Syarmine/syarmine.github.io` on the `gh-pages` branch and edit each section as a form. The forms
 are defined in `.pages.yml`. You can also edit the files directly on github.com.
 
-### Things to complete
+### Notes
 
-- `_data/career.yml` and `_data/education.yml`: replace every `[bracketed]` value.
-- `_data/credentials.yml`: add each credential's public verification link to `url`
-  (Microsoft Learn credential page, Credly or Coursera). A **Verify** button appears when it is set.
-- `_data/projects.yml`: the five projects are templates. Replace the challenge, solution and
-  outcome numbers with real ones, then set `placeholder: false` to remove the
-  "Figures on this project are placeholders" note.
-- `_data/profile.yml`: add your role to "Current".
+- Case study figures in `_data/projects.yml` come from the CV. The `placeholder` flag is still
+  supported if you add a project before its numbers are confirmed.
+- Credentials accept a public verification link in `url`, which adds a **Verify** button.
 
 ## Design
 
