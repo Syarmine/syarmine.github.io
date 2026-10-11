@@ -1,18 +1,18 @@
 # Top of the page: professional summary and quick facts.
-headline: "Data and analytics professional"
+headline: "Analytics engineer · Health economics background"
 summary: >-
-  Analyst working across the full data stack: modelling and analysis in SQL,
-  Python and R, business intelligence in Power BI, Tableau and Microsoft Fabric,
-  and cloud deployment on Azure and AWS. Focused on turning operational and
-  financial data into reporting that leaders use, and on building data
-  capability in the teams around them. Has trained more than 500 professionals
-  in SQL, Power BI and Tableau.
+  Analytics engineer who builds data models, pipelines and reporting in SQL,
+  Python, R, Power BI and Microsoft Fabric, currently at bp in Kuala Lumpur.
+  Comes to data from medicine and health economics, with a master's from the
+  London School of Economics, so the work starts from the decision a number has
+  to support. Has trained more than 500 professionals in SQL, Power BI and
+  Tableau, and writes about Power BI and Fabric on Medium.
 facts:
   - label: "Current"
-    value: "bp"                     # add your role, e.g. "Senior Analyst, bp"
+    value: "bp · Kuala Lumpur"      # add your role, e.g. "Senior Analyst, bp"
   - label: "Education"
     value: "London School of Economics"
   - label: "Certified"
-    value: "Power BI Data Analyst (PL-300)"
+    value: "Microsoft PL-300 · Google Advanced Data Analytics"
   - label: "Focus"
-    value: "BI, data engineering, cloud"
+    value: "Power BI, Microsoft Fabric, Python, R"

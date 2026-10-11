@@ -2,6 +2,29 @@
 # placeholder: true shows a small "figures are placeholders" note in the
 # pop-up. Replace the numbers with real ones and set it to false.
 # visual: line, bars, stacked, hbar, area, dots, arch, pipeline
+- id: linkedin-skills
+  title: "LinkedIn Skills Assessment navigator"
+  category: "Business intelligence"
+  stack: ["Power BI", "Power Query", "DAX"]
+  visual: hbar
+  tone: brand
+  summary: "A Power BI report for choosing which LinkedIn skills assessments to take."
+  challenge: >-
+    LinkedIn offers dozens of skills assessments, each a short multiple-choice
+    test, but no easy way to compare them or plan which ones support a profile.
+  solution: >-
+    Built a Power BI report that catalogues the assessments so they can be
+    browsed and filtered in one place, and wrote up the approach on Medium.
+  outcomes:
+    - value: "93"
+      label: "Assessments catalogued"
+    - value: "≈ 15"
+      label: "Questions per assessment"
+    - value: "1"
+      label: "Report to plan from"
+  link: "https://medium.com/@SyarmineS/improve-your-linkedin-profile-visibility-through-linkedin-skills-assessment-d7278379bea3"
+  placeholder: false
+
 - id: exec-dashboard
   title: "Executive performance dashboard"
   category: "Business intelligence"

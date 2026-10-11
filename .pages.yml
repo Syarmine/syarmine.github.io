@@ -29,7 +29,7 @@ content:
       - name: icon
         label: Icon
         type: select
-        options: { values: [code, chart, layers, cloud, people, spark, pulse] }
+        options: { values: [code, chart, layers, cloud, people, spark, pulse, pen] }
       - { name: items, label: Tools, type: string, list: true }
 
   - name: projects
@@ -60,6 +60,7 @@ content:
         fields:
           - { name: value, label: "Number (e.g. −35%)", type: string }
           - { name: label, label: What it measures, type: string }
+      - { name: link, label: "Link to write-up (optional)", type: string }
       - { name: placeholder, label: Figures are placeholders, type: boolean }
 
   - name: career
@@ -96,3 +97,14 @@ content:
       - { name: code, label: "Exam or ID (e.g. PL-300)", type: string }
       - { name: year, label: Year, type: string }
       - { name: url, label: Verification link, type: string }
+
+  - name: writing
+    label: Writing
+    type: file
+    path: _data/writing.yml
+    list: true
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: venue, label: "Where (e.g. Medium)", type: string }
+      - { name: year, label: Year, type: string }
+      - { name: url, label: Link, type: string }

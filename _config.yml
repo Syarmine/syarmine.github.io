@@ -2,10 +2,10 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Data and analytics"
+tagline: "Analytics engineering"
 description: >-
-  Data and analytics professional working across SQL, Python, R, Power BI,
-  Tableau, Microsoft Fabric, Databricks and cloud platforms.
+  Analytics engineer working in SQL, Python, R, Power BI and Microsoft Fabric,
+  with a background in medicine and health economics.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en
