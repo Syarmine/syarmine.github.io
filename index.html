@@ -163,7 +163,12 @@ layout: default
       </ul>
     </div>
     <div id="credentials">
-      <div class="band-head"><div><span class="kicker">Credentials</span><h2>Verified credentials</h2></div></div>
+      <div class="band-head">
+        <div><span class="kicker">Credentials</span><h2>Verified credentials</h2></div>
+        {%- if site.microsoft_learn_url %}
+        <a class="text-link" href="{{ site.microsoft_learn_url }}" target="_blank" rel="noopener">View all on Microsoft Learn {% include icon.html name="external" %}</a>
+        {%- endif %}
+      </div>
       <ul class="cred-list">
         {%- for c in site.data.credentials %}
         <li class="cred">
