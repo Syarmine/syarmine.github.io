@@ -2,10 +2,10 @@
 # Site settings
 # ------------------------------------------------------------------
 title: "Syarmine Shah"
-tagline: "Technical delivery · Enterprise data and AI"
+tagline: "Technical delivery · Enterprise data and agentic AI"
 description: >-
-  Technical delivery lead for enterprise data and AI, with a background in
-  medicine, health economics and financial services.
+  Technical delivery lead for enterprise data, generative and agentic AI, with
+  a background in medicine, health economics and financial services.
 url: "https://syarmine.github.io"
 baseurl: ""
 lang: en
